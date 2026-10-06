@@ -1,0 +1,15 @@
+name = "magic_moments"
+description = "Magic Moments example program"
+version = "0.1.0-dev"
+
+authors = ["SBP"]
+maintainers = ["SBP <seirios@ik.me>"]
+licenses = "MIT"
+website = ""
+tags = ["example"]
+
+[[depends-on]]
+geometry = "~0.1.0-dev"
+
+[[pins]]
+geometry = { path='../geometry' }

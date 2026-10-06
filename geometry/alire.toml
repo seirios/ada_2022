@@ -1,0 +1,9 @@
+name = "geometry"
+description = "Geometry package for Magic Moments example program"
+version = "0.1.0-dev"
+
+authors = ["SBP"]
+maintainers = ["SBP <seirios@ik.me>"]
+licenses = "MIT"
+website = ""
+tags = ["example"]
