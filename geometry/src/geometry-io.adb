@@ -43,15 +43,15 @@ package body Geometry.IO is
       Get (Y_Coord);
       loop
       Get(A); Get(B); Get(C);
-      exit when A < B+C and then
-      	  B < C+A and then
-      	  C < A+B;
+      exit when A < B + C and then
+         B < C + A and then
+         C < A + B;
       Put("Sorry, not a triangle, " &
-      	"enter sides again please");
+         "enter sides again please");
       New_Line;
       end loop;
       return new Triangle'(X_Coord, Y_Coord,
-      	A, B, C);
+         A, B, C);
    end Get_Triangle;
 
 end Geometry.IO;
