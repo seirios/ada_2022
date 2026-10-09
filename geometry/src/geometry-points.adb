@@ -4,7 +4,8 @@ package body Geometry.Points is
    overriding
    function Area (
       P : Point
-   ) return Float is
+   ) return Float
+   is
    begin
       return 0.0;
    end Area;
@@ -12,7 +13,8 @@ package body Geometry.Points is
    overriding
    function MI (
       P : Point
-   ) return Float is
+   ) return Float
+   is
    begin
       return 0.0;
    end MI;
@@ -20,7 +22,8 @@ package body Geometry.Points is
    overriding
    function Name (
       P : Point
-   ) return String is
+   ) return String
+   is
    begin
       return "Point";
    end Name;

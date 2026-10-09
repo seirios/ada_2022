@@ -10,19 +10,16 @@ package Geometry.Triangles is
    overriding
    function Area (
       T : Triangle
-   ) return Float
-   ;
+   ) return Float;
 
    overriding
    function MI (
       T : Triangle
-   ) return Float
-   ;
+   ) return Float;
 
    overriding
    function Name (
       T : Triangle
-   ) return String
-   ;
+   ) return String;
 
 end Geometry.Triangles;

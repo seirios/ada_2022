@@ -5,7 +5,8 @@ package body Geometry.Circles is
    overriding
    function Area (
       C : Circle
-   ) return Float is
+   ) return Float
+   is
    begin
       return Ada.Numerics.Pi * C.Radius**2;
    end Area;
@@ -13,7 +14,8 @@ package body Geometry.Circles is
    overriding
    function MI (
       C : Circle
-   ) return Float is
+   ) return Float
+   is
    begin
       return 0.5 * C.Area * C.Radius**2;
    end MI;
@@ -21,7 +23,8 @@ package body Geometry.Circles is
    overriding
    function Name (
       C : Circle
-   ) return String is
+   ) return String
+   is
    begin
       return "Circle";
    end Name;

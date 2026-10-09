@@ -10,19 +10,16 @@ package Geometry.Squares is
    overriding
    function Area (
       S : Square
-   ) return Float
-   ;
+   ) return Float;
 
    overriding
    function MI (
       S : Square
-   ) return Float
-   ;
+   ) return Float;
 
    overriding
    function Name (
       S : Square
-   ) return String
-   ;
+   ) return String;
 
 end Geometry.Squares;

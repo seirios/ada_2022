@@ -9,7 +9,8 @@ package Geometry is
 
    function Area (
       O : Object
-   ) return Float is abstract;
+   ) return Float
+   is abstract;
 
    function Distance (
       O : Object
@@ -17,10 +18,12 @@ package Geometry is
 
    function MI (
       O : Object
-   ) return Float is abstract;
+   ) return Float
+   is abstract;
 
    function Name (
       O : Object
-   ) return String is abstract;
+   ) return String
+   is abstract;
 
 end Geometry;
