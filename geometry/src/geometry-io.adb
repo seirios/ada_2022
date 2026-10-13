@@ -6,7 +6,7 @@ with Geometry.Triangles;
 with Geometry.Squares;
 package body Geometry.IO is
 
-   function Get_Circle  return Lists.Pointer
+   function Get_Circle return Lists.Pointer
    is
          use Circles;
          X_Coord : Float;
@@ -19,7 +19,7 @@ package body Geometry.IO is
       return new Circle'(X_Coord, Y_Coord, Radius);
    end Get_Circle;
 
-   function Get_Square  return Lists.Pointer
+   function Get_Square return Lists.Pointer
    is
          use Squares;
          X_Coord : Float;
@@ -32,7 +32,7 @@ package body Geometry.IO is
       return new Square'(X_Coord, Y_Coord, Side);
    end Get_Square;
 
-   function Get_Triangle  return Lists.Pointer
+   function Get_Triangle return Lists.Pointer
    is
          use Triangles;
          X_Coord : Float;
