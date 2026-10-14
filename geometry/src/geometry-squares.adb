@@ -27,5 +27,4 @@ package body Geometry.Squares is
    begin
       return "Square";
    end Name;
-
 end Geometry.Squares;

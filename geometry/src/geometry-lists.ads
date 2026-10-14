@@ -17,5 +17,4 @@ package Geometry.Lists is
       The_List : in out List;
       Obj_Ptr : Pointer
    );
-
 end Geometry.Lists;

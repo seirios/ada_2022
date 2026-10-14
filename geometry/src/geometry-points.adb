@@ -27,5 +27,4 @@ package body Geometry.Points is
    begin
       return "Point";
    end Name;
-
 end Geometry.Points;

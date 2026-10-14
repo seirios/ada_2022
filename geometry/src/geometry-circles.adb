@@ -28,5 +28,4 @@ package body Geometry.Circles is
    begin
       return "Circle";
    end Name;
-
 end Geometry.Circles;

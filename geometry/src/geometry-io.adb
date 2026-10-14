@@ -53,5 +53,4 @@ package body Geometry.IO is
       return new Triangle'(X_Coord, Y_Coord,
          A, B, C);
    end Get_Triangle;
-
 end Geometry.IO;

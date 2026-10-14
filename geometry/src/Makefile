@@ -1,4 +1,4 @@
-DRN_FILES := $(wildcard geometry*.drn)
+DRN_FILES := $(wildcard *.drn)
 ADB_FILES := $(subst .drn,.adb,$(DRN_FILES))
 ADS_FILES := $(subst .drn,.ads,$(DRN_FILES))
 

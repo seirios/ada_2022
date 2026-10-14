@@ -30,5 +30,4 @@ package body Geometry.Triangles is
    begin
       return "Triangle";
    end Name;
-
 end Geometry.Triangles;

@@ -21,5 +21,4 @@ package Geometry.Squares is
    function Name (
       S : Square
    ) return String;
-
 end Geometry.Squares;

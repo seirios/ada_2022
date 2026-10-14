@@ -25,5 +25,4 @@ package Geometry is
       O : Object
    ) return String
    is abstract;
-
 end Geometry;

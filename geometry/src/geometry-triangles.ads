@@ -21,5 +21,4 @@ package Geometry.Triangles is
    function Name (
       T : Triangle
    ) return String;
-
 end Geometry.Triangles;

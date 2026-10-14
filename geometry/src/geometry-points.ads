@@ -19,5 +19,4 @@ package Geometry.Points is
    function Name (
       P : Point
    ) return String;
-
 end Geometry.Points;

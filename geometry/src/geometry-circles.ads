@@ -21,5 +21,4 @@ package Geometry.Circles is
    function Name (
       C : Circle
    ) return String;
-
 end Geometry.Circles;

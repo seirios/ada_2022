@@ -16,5 +16,4 @@ package body Geometry.Magic is
    begin
       return OC.X_Coord * OC.Area;
    end Moment;
-
 end Geometry.Magic;

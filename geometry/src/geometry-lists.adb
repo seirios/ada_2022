@@ -9,5 +9,4 @@ package body Geometry.Lists is
    begin
       The_List := new Cell'(The_List, Obj_Ptr);
    end Add_To_List;
-
 end Geometry.Lists;
