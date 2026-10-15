@@ -14,16 +14,13 @@ with Ada.Text_IO; use Ada.Text_IO;
             Get (Code_Letter);
             exit when Code_Letter /= ' ';
          end loop;
-         case Code_Letter is
-            when 'C' | 'c' =>
-               Object_Ptr := Get_Circle;
-            when 'T' | 't' =>
-               Object_Ptr := Get_Triangle;
-            when 'S' | 's' =>
-               Object_Ptr := Get_Square;
-            when others =>
-               exit;
-         end case;
+         when 'C' | 'c' =>
+            Get_Circle;
+         when 'T' | 't' =>
+            Get_Triangle;
+         when 'S' | 's' =>
+            Get_Square;
+         exit;
          Lists.Add_To_List (The_List, Object_Ptr);
       end loop;
    end Build_List;
