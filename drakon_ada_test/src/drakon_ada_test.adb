@@ -13,4 +13,13 @@ begin
    Test_Cases.Select_Char ('A');
    Test_Cases.Select_Char ('B');
    Test_Cases.Select_Char ('C');
+
+   Put_Line ("Declare_Block");
+   Test_Cases.Declare_Block;
+
+   Put_Line ("Declare_Block_Nested");
+   Test_Cases.Declare_Block_Nested;
+
+   Put_Line ("Declare_Block_Named");
+   Test_Cases.Declare_Block_Named;
 end Drakon_Ada_Test;

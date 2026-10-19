@@ -2,6 +2,53 @@
 with Ada.Text_IO; use Ada.Text_IO;
 package body Test_Cases is
 
+   procedure Declare_Block
+   is
+   begin
+      declare
+         J : Integer := 0;
+      begin
+         J := J + 1;
+         Put_Line (J'Image);
+      end;
+   end Declare_Block;
+
+   procedure Declare_Block_Named
+   is
+   begin
+      Outer :
+      declare
+         J : constant Integer := 0;
+      begin
+         Put_Line (J'Image);
+         declare
+            K : Integer := 0;
+            J : constant Integer := 1;
+            L : constant Integer := Outer.J;
+         begin
+            K := L + 1;
+            Put_Line (K'Image);
+         end;
+      end Outer;
+   end Declare_Block_Named;
+
+   procedure Declare_Block_Nested
+   is
+   begin
+      declare
+         J : Integer := 0;
+      begin
+         J := J + 1;
+         Put_Line (J'Image);
+         declare
+            K : Integer := 0;
+         begin
+            K := J + 1;
+            Put_Line (K'Image);
+         end;
+      end;
+   end Declare_Block_Nested;
+
    procedure Select_Char (
       C : Character
    )
