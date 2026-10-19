@@ -1,0 +1,10 @@
+name = "drakon_ada_test"
+description = "Unit tests for DRAKON Ada"
+version = "0.1.0-dev"
+
+authors = ["SBP"]
+maintainers = ["SBP <seirios@ik.me>"]
+maintainers-logins = ["Seirios"]
+licenses = "MIT"
+website = ""
+tags = ["drakon"]
