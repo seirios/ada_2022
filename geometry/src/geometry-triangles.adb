@@ -8,7 +8,7 @@ package body Geometry.Triangles is
       T : Triangle
    ) return Float
    is
-         S : constant Float := 0.5 * (T.A + T.B + T.C);
+      S : constant Float := 0.5 * (T.A + T.B + T.C);
    begin
       return Sqrt (S * (S - T.A) * (S - T.B) * (S - T.C));
    end Area;

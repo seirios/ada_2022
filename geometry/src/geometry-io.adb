@@ -8,10 +8,10 @@ package body Geometry.IO is
 
    function Get_Circle return Lists.Pointer
    is
-         use Circles;
-         X_Coord : Float;
-         Y_Coord : Float;
-         Radius : Float;
+      use Circles;
+      X_Coord : Float;
+      Y_Coord : Float;
+      Radius : Float;
    begin
       Get (X_Coord);
       Get (Y_Coord);
@@ -21,10 +21,10 @@ package body Geometry.IO is
 
    function Get_Square return Lists.Pointer
    is
-         use Squares;
-         X_Coord : Float;
-         Y_Coord : Float;
-         Side : Float;
+      use Squares;
+      X_Coord : Float;
+      Y_Coord : Float;
+      Side : Float;
    begin
       Get (X_Coord);
       Get (Y_Coord);
@@ -34,10 +34,10 @@ package body Geometry.IO is
 
    function Get_Triangle return Lists.Pointer
    is
-         use Triangles;
-         X_Coord : Float;
-         Y_Coord : Float;
-         A, B, C : Float;
+      use Triangles;
+      X_Coord : Float;
+      Y_Coord : Float;
+      A, B, C : Float;
    begin
       Get (X_Coord);
       Get (Y_Coord);

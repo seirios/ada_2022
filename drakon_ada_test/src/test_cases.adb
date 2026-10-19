@@ -64,9 +64,33 @@ package body Test_Cases is
       end case;
    end Select_Char;
 
+   procedure Select_Combined (
+      C : Character
+   )
+   is
+      Ret : Boolean := True;
+   begin
+      case C is
+      when 'S' =>
+         if Ret then
+            Put_Line ("procedure");
+         else
+            Put_Line ("function");
+         end if;
+      when 'T' =>
+         Put_Line ("type");
+         Put_Line ("type");
+      when 'Y' =>
+         Put_Line ("subtype");
+         Put_Line ("type");
+      when others =>
+         null;
+      end case;
+   end Select_Combined;
+
    procedure While_Loop
    is
-         Iter : Integer := 0;
+      Iter : Integer := 0;
    begin
       loop
          exit when not (Iter < 5
@@ -78,7 +102,7 @@ package body Test_Cases is
 
    procedure While_Loop_Negate
    is
-         Iter : Integer := 0;
+      Iter : Integer := 0;
    begin
       loop
          exit when Iter >= 5;

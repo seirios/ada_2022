@@ -11,6 +11,10 @@ package Test_Cases is
       C : Character
    );
 
+   procedure Select_Combined (
+      C : Character
+   );
+
    procedure While_Loop;
 
    procedure While_Loop_Negate;

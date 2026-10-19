@@ -14,6 +14,9 @@ begin
    Test_Cases.Select_Char ('B');
    Test_Cases.Select_Char ('C');
 
+   Put_Line ("Select_Combined");
+   Test_Cases.Select_Combined ('Y');
+
    Put_Line ("Declare_Block");
    Test_Cases.Declare_Block;
 
