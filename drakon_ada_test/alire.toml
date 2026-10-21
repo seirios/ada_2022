@@ -8,3 +8,8 @@ maintainers-logins = ["Seirios"]
 licenses = "MIT"
 website = ""
 tags = ["drakon"]
+
+[[actions]]
+type = "test"
+command = ["make", "check"]
+directory = "src"

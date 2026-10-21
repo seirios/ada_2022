@@ -6,8 +6,8 @@ with Ada.Text_IO; use Ada.Text_IO;
       The_List : in out Lists.List
    )
    is
-         Code_Letter : Character;
-         Object_Ptr : Lists.Pointer;
+      Code_Letter : Character;
+      Object_Ptr : Lists.Pointer;
    begin
       loop
          loop

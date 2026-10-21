@@ -3,11 +3,14 @@ with Test_Cases;
 
 procedure Drakon_Ada_Test is
 begin
-   Put_Line ("While_Loop");
-   Test_Cases.While_Loop;
+   Put_Line ("Simple_Loop");
+   Test_Cases.Simple_Loop;
 
-   Put_Line ("While_Loop_Negate");
-   Test_Cases.While_Loop_Negate;
+   Put_Line ("Simple_Loop_Negate");
+   Test_Cases.Simple_Loop_Negate;
+
+   Put_Line ("For_Loop");
+   Test_Cases.For_Loop;
 
    Put_Line ("Select_Char");
    Test_Cases.Select_Char ('A');

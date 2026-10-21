@@ -6,7 +6,7 @@ with Ada.Text_IO; use Ada.Text_IO;
 
    procedure Magic_Moments
    is
-         The_List : List := null;
+      The_List : List := null;
    begin
       Put ("Welcome to Magic Moments");
       New_Line (2);

@@ -18,6 +18,8 @@ package Test_Cases is
 
    procedure Declare_Block_Nested;
 
+   procedure For_Loop;
+
    procedure Select_Bool (
       C : Boolean
    );
@@ -30,7 +32,7 @@ package Test_Cases is
       C : Character
    );
 
-   procedure While_Loop;
+   procedure Simple_Loop;
 
-   procedure While_Loop_Negate;
+   procedure Simple_Loop_Negate;
 end Test_Cases;

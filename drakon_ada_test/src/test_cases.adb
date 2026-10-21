@@ -49,6 +49,20 @@ package body Test_Cases is
       end;
    end Declare_Block_Nested;
 
+   procedure For_Loop
+   is
+      Last : Integer;
+   begin
+      for I in 0 .. 4
+      loop
+         Put_Line (I'Image);
+         if I = 3 then
+            Last := I;
+            exit;
+         end if;
+      end loop;
+   end For_Loop;
+
    procedure Select_Bool (
       C : Boolean
    )
@@ -101,7 +115,18 @@ package body Test_Cases is
       end case;
    end Select_Combined;
 
-   procedure While_Loop
+   procedure Simple_Loop
+   is
+      Iter : Integer := 0;
+   begin
+      loop
+         exit when Iter >= 5;
+         Put_Line (Iter'Image);
+         Iter := Iter + 1;
+      end loop;
+   end Simple_Loop;
+
+   procedure Simple_Loop_Negate
    is
       Iter : Integer := 0;
    begin
@@ -111,16 +136,5 @@ package body Test_Cases is
          Put_Line (Iter'Image);
          Iter := Iter + 1;
       end loop;
-   end While_Loop;
-
-   procedure While_Loop_Negate
-   is
-      Iter : Integer := 0;
-   begin
-      loop
-         exit when Iter >= 5;
-         Put_Line (Iter'Image);
-         Iter := Iter + 1;
-      end loop;
-   end While_Loop_Negate;
+   end Simple_Loop_Negate;
 end Test_Cases;

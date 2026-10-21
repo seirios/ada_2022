@@ -1,0 +1,32 @@
+Simple_Loop
+ 0
+ 1
+ 2
+ 3
+ 4
+Simple_Loop_Negate
+ 0
+ 1
+ 2
+ 3
+ 4
+For_Loop
+ 0
+ 1
+ 2
+ 3
+Select_Char
+Is A
+Is B
+Is neither A nor B
+Select_Combined
+subtype
+type
+Declare_Block
+ 1
+Declare_Block_Nested
+ 1
+ 2
+Declare_Block_Named
+ 0
+ 1
