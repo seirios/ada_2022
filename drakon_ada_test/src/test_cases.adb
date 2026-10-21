@@ -63,6 +63,22 @@ package body Test_Cases is
       end loop;
    end For_Loop;
 
+   procedure Named_Loop
+   is
+   begin
+      Outer :
+      for I in 0 .. 6
+      loop
+         for J in 0 .. 6
+         loop
+            Put_Line (I'Image & J'Image);
+            if J = 3 then
+               exit Outer;
+            end if;
+         end loop;
+      end loop Outer;
+   end Named_Loop;
+
    procedure Select_Bool (
       C : Boolean
    )

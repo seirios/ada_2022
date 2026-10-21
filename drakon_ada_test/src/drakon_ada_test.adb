@@ -12,6 +12,9 @@ begin
    Put_Line ("For_Loop");
    Test_Cases.For_Loop;
 
+   Put_Line ("Named_Loop");
+   Test_Cases.Named_Loop;
+
    Put_Line ("Select_Char");
    Test_Cases.Select_Char ('A');
    Test_Cases.Select_Char ('B');

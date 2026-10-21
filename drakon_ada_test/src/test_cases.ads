@@ -20,6 +20,8 @@ package Test_Cases is
 
    procedure For_Loop;
 
+   procedure Named_Loop;
+
    procedure Select_Bool (
       C : Boolean
    );
