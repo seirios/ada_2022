@@ -49,6 +49,19 @@ package body Test_Cases is
       end;
    end Declare_Block_Nested;
 
+   procedure Select_Bool (
+      C : Boolean
+   )
+   is
+   begin
+      case C is
+      when True =>
+         Put_Line ("Is True");
+      when False =>
+         Put_Line ("Is False");
+      end case;
+   end Select_Bool;
+
    procedure Select_Char (
       C : Character
    )

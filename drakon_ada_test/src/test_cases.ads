@@ -18,6 +18,10 @@ package Test_Cases is
 
    procedure Declare_Block_Nested;
 
+   procedure Select_Bool (
+      C : Boolean
+   );
+
    procedure Select_Char (
       C : Character
    );
