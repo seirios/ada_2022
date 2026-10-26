@@ -63,6 +63,16 @@ package body Test_Cases is
       end loop;
    end For_Loop;
 
+   procedure For_Loop_When
+   is
+      Last : Integer;
+   begin
+      for I in 0 .. 4 when I < 2
+      loop
+         Put_Line (I'Image);
+      end loop;
+   end For_Loop_When;
+
    procedure Named_Loop
    is
    begin
