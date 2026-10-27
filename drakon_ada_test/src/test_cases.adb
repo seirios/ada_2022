@@ -63,9 +63,23 @@ package body Test_Cases is
       end loop;
    end For_Loop;
 
+   procedure For_Loop_Nested_When
+   is
+   begin
+      for I in 0 .. 4
+         when I < 3
+      loop
+         for J in 0 .. 4
+            when J < 3
+            and then J >= 1
+         loop
+            Put_Line (I'Image & J'Image);
+         end loop;
+      end loop;
+   end For_Loop_Nested_When;
+
    procedure For_Loop_When
    is
-      Last : Integer;
    begin
       for I in 0 .. 4
          when I < 3

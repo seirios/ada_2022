@@ -15,6 +15,9 @@ begin
    Put_Line ("For_Loop_When");
    Test_Cases.For_Loop_When;
 
+   Put_Line ("For_Loop_Nested_When");
+   Test_Cases.For_Loop_Nested_When;
+
    Put_Line ("Named_Loop");
    Test_Cases.Named_Loop;
 
