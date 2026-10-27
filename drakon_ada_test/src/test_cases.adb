@@ -67,7 +67,8 @@ package body Test_Cases is
    is
       Last : Integer;
    begin
-      for I in 0 .. 4 when I < 2
+      for I in 0 .. 4
+         when I < 3
       loop
          Put_Line (I'Image);
       end loop;
