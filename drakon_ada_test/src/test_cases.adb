@@ -2,6 +2,14 @@
 with Ada.Text_IO; use Ada.Text_IO;
 package body Test_Cases is
 
+   procedure Multi_Is
+   is
+      A : constant Integer := 0;
+      B : Integer := 1;
+   begin
+      null;
+   end Multi_Is;
+
    procedure Declare_Block
    is
    begin
@@ -13,7 +21,7 @@ package body Test_Cases is
       end;
    end Declare_Block;
 
-   procedure Declare_Block_Named
+   procedure Declare_Block_Named_Nested
    is
    begin
       Outer :
@@ -30,7 +38,7 @@ package body Test_Cases is
             Put_Line (K'Image);
          end;
       end Outer;
-   end Declare_Block_Named;
+   end Declare_Block_Named_Nested;
 
    procedure Declare_Block_Nested
    is
@@ -136,7 +144,7 @@ package body Test_Cases is
       C : Character
    )
    is
-      Ret : Boolean := True;
+      Ret : constant Boolean := True;
    begin
       case C is
       when 'S' =>

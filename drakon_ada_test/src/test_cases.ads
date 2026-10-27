@@ -26,7 +26,7 @@ package Test_Cases is
 
    procedure Declare_Block;
 
-   procedure Declare_Block_Named;
+   procedure Declare_Block_Named_Nested;
 
    procedure Declare_Block_Nested;
 

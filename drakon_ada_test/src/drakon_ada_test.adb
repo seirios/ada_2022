@@ -35,6 +35,6 @@ begin
    Put_Line ("Declare_Block_Nested");
    Test_Cases.Declare_Block_Nested;
 
-   Put_Line ("Declare_Block_Named");
-   Test_Cases.Declare_Block_Named;
+   Put_Line ("Declare_Block_Named_Nested");
+   Test_Cases.Declare_Block_Named_Nested;
 end Drakon_Ada_Test;

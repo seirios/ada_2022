@@ -15,6 +15,17 @@ For_Loop
  1
  2
  3
+For_Loop_When
+ 0
+ 1
+ 2
+For_Loop_Nested_When
+ 0 1
+ 0 2
+ 1 1
+ 1 2
+ 2 1
+ 2 2
 Named_Loop
  0 0
  0 1
@@ -32,6 +43,6 @@ Declare_Block
 Declare_Block_Nested
  1
  2
-Declare_Block_Named
+Declare_Block_Named_Nested
  0
  1
