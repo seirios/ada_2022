@@ -10,6 +10,7 @@ package Test_Cases is
          A : Integer;
          B : Character;
       end record;
+   for Simple_Record'Size use 64;
 
    type Simple_Record_Null is
       null record;
