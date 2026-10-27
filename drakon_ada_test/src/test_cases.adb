@@ -78,8 +78,8 @@ package body Test_Cases is
          when I < 3
       loop
          for J in 0 .. 4
-            when J < 3
-            and then J >= 1
+            when J < 3 and then
+               J >= 1
          loop
             Put_Line (I'Image & J'Image);
          end loop;
@@ -180,8 +180,8 @@ package body Test_Cases is
       Iter : Integer := 0;
    begin
       loop
-         exit when not (Iter < 5
-            and then Iter >= 0);
+         exit when not (Iter < 5 and then
+            Iter >= 0);
          Put_Line (Iter'Image);
          Iter := Iter + 1;
       end loop;
