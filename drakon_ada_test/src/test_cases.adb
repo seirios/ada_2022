@@ -10,6 +10,12 @@ package body Test_Cases is
       null;
    end Multi_Is;
 
+   function Simple_Expr_Func (
+      X : Integer
+   ) return Integer
+   is
+      (if X > 0 then 1 elsif X < 0 then -1 else 0);
+
    procedure Declare_Block
    is begin
       declare
