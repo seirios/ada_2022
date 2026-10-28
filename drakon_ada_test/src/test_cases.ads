@@ -31,6 +31,8 @@ package Test_Cases is
 
    procedure Declare_Block_Nested;
 
+   function Extended_Return return Simple_Array;
+
    procedure For_Loop;
 
    procedure For_Loop_Nested_When;
@@ -54,4 +56,6 @@ package Test_Cases is
    procedure Simple_Loop;
 
    procedure Simple_Loop_Negate;
+
+   function Simple_Return return Boolean;
 end Test_Cases;

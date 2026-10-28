@@ -5,8 +5,7 @@ package body Geometry.Squares is
    function Area (
       S : Square
    ) return Float
-   is
-   begin
+   is begin
       return S.Side**2;
    end Area;
 
@@ -14,8 +13,7 @@ package body Geometry.Squares is
    function MI (
       S : Square
    ) return Float
-   is
-   begin
+   is begin
       return S.Area * S.Side**2 / 6.0;
    end MI;
 
@@ -23,8 +21,7 @@ package body Geometry.Squares is
    function Name (
       S : Square
    ) return String
-   is
-   begin
+   is begin
       return "Square";
    end Name;
 end Geometry.Squares;

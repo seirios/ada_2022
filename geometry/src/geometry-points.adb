@@ -5,8 +5,7 @@ package body Geometry.Points is
    function Area (
       P : Point
    ) return Float
-   is
-   begin
+   is begin
       return 0.0;
    end Area;
 
@@ -14,8 +13,7 @@ package body Geometry.Points is
    function MI (
       P : Point
    ) return Float
-   is
-   begin
+   is begin
       return 0.0;
    end MI;
 
@@ -23,8 +21,7 @@ package body Geometry.Points is
    function Name (
       P : Point
    ) return String
-   is
-   begin
+   is begin
       return "Point";
    end Name;
 end Geometry.Points;

@@ -5,8 +5,7 @@ package body Geometry.Lists is
       The_List : in out List;
       Obj_Ptr : Pointer
    )
-   is
-   begin
+   is begin
       The_List := new Cell'(The_List, Obj_Ptr);
    end Add_To_List;
 end Geometry.Lists;

@@ -17,8 +17,7 @@ package body Geometry.Triangles is
    function MI (
       T : Triangle
    ) return Float
-   is
-   begin
+   is begin
       return T.Area * (T.A**2 + T.B**2 + T.C**2) / 36.0;
    end MI;
 
@@ -26,8 +25,7 @@ package body Geometry.Triangles is
    function Name (
       T : Triangle
    ) return String
-   is
-   begin
+   is begin
       return "Triangle";
    end Name;
 end Geometry.Triangles;

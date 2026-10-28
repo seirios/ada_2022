@@ -11,8 +11,7 @@ package body Test_Cases is
    end Multi_Is;
 
    procedure Declare_Block
-   is
-   begin
+   is begin
       declare
          J : Integer := 0;
       begin
@@ -22,8 +21,7 @@ package body Test_Cases is
    end Declare_Block;
 
    procedure Declare_Block_Named_Nested
-   is
-   begin
+   is begin
       Outer :
       declare
          J : constant Integer := 0;
@@ -41,8 +39,7 @@ package body Test_Cases is
    end Declare_Block_Named_Nested;
 
    procedure Declare_Block_Nested
-   is
-   begin
+   is begin
       declare
          J : Integer := 0;
       begin
@@ -56,6 +53,15 @@ package body Test_Cases is
          end;
       end;
    end Declare_Block_Nested;
+
+   function Extended_Return return Simple_Array
+   is begin
+      return A : Simple_Array do
+         for I in A'Range loop
+            A (I) := 1;
+         end loop;
+      end return;
+   end Extended_Return;
 
    procedure For_Loop
    is
@@ -72,8 +78,7 @@ package body Test_Cases is
    end For_Loop;
 
    procedure For_Loop_Nested_When
-   is
-   begin
+   is begin
       for I in 0 .. 4
          when I < 3
       loop
@@ -87,8 +92,7 @@ package body Test_Cases is
    end For_Loop_Nested_When;
 
    procedure For_Loop_When
-   is
-   begin
+   is begin
       for I in 0 .. 4
          when I < 3
       loop
@@ -97,8 +101,7 @@ package body Test_Cases is
    end For_Loop_When;
 
    procedure Named_Loop
-   is
-   begin
+   is begin
       Outer :
       for I in 0 .. 6
       loop
@@ -115,8 +118,7 @@ package body Test_Cases is
    procedure Select_Bool (
       C : Boolean
    )
-   is
-   begin
+   is begin
       case C is
       when True =>
          Put_Line ("Is True");
@@ -128,8 +130,7 @@ package body Test_Cases is
    procedure Select_Char (
       C : Character
    )
-   is
-   begin
+   is begin
       case C is
       when 'A' =>
          Put_Line ("Is A");
@@ -186,4 +187,9 @@ package body Test_Cases is
          Iter := Iter + 1;
       end loop;
    end Simple_Loop_Negate;
+
+   function Simple_Return return Boolean
+   is begin
+      return False;
+   end Simple_Return;
 end Test_Cases;
