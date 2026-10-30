@@ -15,15 +15,15 @@ package Test_Cases is
    type Simple_Record_Null is
       null record;
 
-   subtype Simple_Subtype is
-      Integer range 0 .. 10;
-
    type Simple_Type is
       new Integer;
 
    type Simple_Type_Enum is
       (Red, Amber, Green, White)
       with Default_Value => Red;
+
+   subtype Simple_Subtype is
+      Simple_Type range 0 .. 10;
 
    procedure Declare_Block;
 
