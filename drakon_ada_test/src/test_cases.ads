@@ -22,7 +22,7 @@ package Test_Cases is
       new Integer;
 
    type Simple_Type_Enum is
-      (Red, Amber, Green)
+      (Red, Amber, Green, White)
       with Default_Value => Red;
 
    procedure Declare_Block;
