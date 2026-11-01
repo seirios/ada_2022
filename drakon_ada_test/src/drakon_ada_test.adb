@@ -18,8 +18,8 @@ begin
    Put_Line ("For_Loop_Nested_When");
    Test_Cases.For_Loop_Nested_When;
 
-   Put_Line ("Named_Loop");
-   Test_Cases.Named_Loop;
+   Put_Line ("For_Loop_Named_Nested");
+   Test_Cases.For_Loop_Named_Nested;
 
    Put_Line ("Select_Char");
    Test_Cases.Select_Char ('A');

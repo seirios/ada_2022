@@ -38,11 +38,11 @@ package Test_Cases is
 
    procedure For_Loop;
 
+   procedure For_Loop_Named_Nested;
+
    procedure For_Loop_Nested_When;
 
    procedure For_Loop_When;
-
-   procedure Named_Loop;
 
    procedure Select_Bool (
       C : Boolean
