@@ -38,6 +38,8 @@ package Test_Cases is
 
    procedure For_Loop;
 
+   procedure For_Loop_Continue;
+
    procedure For_Loop_Named_Nested;
 
    procedure For_Loop_Nested_When;

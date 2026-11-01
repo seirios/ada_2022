@@ -83,6 +83,18 @@ package body Test_Cases is
       end loop;
    end For_Loop;
 
+   procedure For_Loop_Continue
+   is begin
+      for I in 0 .. 10
+      loop
+         if I mod 2 = 0 then
+            goto Continue;
+         end if;
+         Put_Line (I'Image);
+         <<Continue>>
+      end loop;
+   end For_Loop_Continue;
+
    procedure For_Loop_Named_Nested
    is begin
       Outer :

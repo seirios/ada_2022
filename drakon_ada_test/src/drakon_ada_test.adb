@@ -12,6 +12,9 @@ begin
    Put_Line ("For_Loop");
    Test_Cases.For_Loop;
 
+   Put_Line ("For_Loop_Continue");
+   Test_Cases.For_Loop_Continue;
+
    Put_Line ("For_Loop_When");
    Test_Cases.For_Loop_When;
 
