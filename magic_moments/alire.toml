@@ -4,9 +4,10 @@ version = "0.1.0-dev"
 
 authors = ["SBP"]
 maintainers = ["SBP <seirios@ik.me>"]
+maintainers-logins = ["Seirios"]
 licenses = "MIT"
 website = ""
-tags = ["example"]
+tags = []
 
 [[depends-on]]
 geometry = "~0.1.0-dev"
