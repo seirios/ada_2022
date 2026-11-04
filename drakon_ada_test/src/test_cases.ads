@@ -2,7 +2,7 @@
 package Test_Cases is
 
    type Simple_Type_Before is
-      new Integer;
+      new Positive;
 
    type Simple_Array is
       array (1 .. 10) of Integer
