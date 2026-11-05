@@ -12,55 +12,57 @@ with Ada.Text_IO; use Ada;
          Num_Size (Max_Value) * 2 ** (Depth (T) - 1);
       A : array (1 .. 4 * Depth (T) - 3) of Page.Line :=
          (others => (others => ' '));
+
       procedure Put (
-            N, Row, Col, Width : Integer
+         N, Row, Col, Width : Integer
       )
       is
-            Size : Integer := Num_Size (N);
-            Offset : Integer := (Width - Size + 1) / 2;
-            Digit : Integer;
-            Number : Integer := N;
+         Size : Integer := Num_Size (N);
+         Offset : Integer := (Width - Size + 1) / 2;
+         Digit : Integer;
+         Number : Integer := N;
       begin
-            if Size > Width then
-               for I in 1 .. Integer'Max (Width, 1)
-               loop
-                  A (Row)(Col + I - 1) := '*';
-               end loop;
-            else
-               A (Row)(Col + Offset .. Col + Offset + Size - 1) :=
-                  Integer'Image (Number);
-            end if;
+         if Size > Width then
+            for I in 1 .. Integer'Max (Width, 1)
+            loop
+               A (Row)(Col + I - 1) := '*';
+            end loop;
+         else
+            A (Row)(Col + Offset .. Col + Offset + Size - 1) :=
+               Integer'Image (Number);
+         end if;
       end Put;
+
       procedure Do_It (
-            T : Tree;
-            Row, Col, W : Integer
+         T : Tree;
+         Row, Col, W : Integer
       )
       is
-            Left : Tree := Left_Subtree (T);
-            Right : Tree := Right_Subtree (T);
+         Left : Tree := Left_Subtree (T);
+         Right : Tree := Right_Subtree (T);
       begin
-            Put (Node_Value (T), Row, Col, W);
-            if Is_Empty (Left) and Is_Empty (Right) then
-               null;
-            else
-               A (Row + 1)(Col + W / 2) := '|';
-            end if;
-            if Is_Empty (Left) then
-               null;
-            else
-               A (Row + 2)(Col + W / 4 .. Col + W / 2) :=
-                  (others => '-');
-               A (Row + 3)(Col + W / 4) := '|';
-               Do_It (Left, Row + 4, Col, W / 2);
-            end if;
-            if Is_Empty (Right) then
-               null;
-            else
-               A (Row + 2)(Col + W / 2 .. Col + 3 * W / 4) :=
-                  (others => '-');
-               A (Row + 3)(Col + 3 * W / 4) := '|';
-               Do_It (Right, Row + 4, Col + W / 2, (W + 1) / 2);
-            end if;
+         Put (Node_Value (T), Row, Col, W);
+         if Is_Empty (Left) and Is_Empty (Right) then
+            null;
+         else
+            A (Row + 1)(Col + W / 2) := '|';
+         end if;
+         if Is_Empty (Left) then
+            null;
+         else
+            A (Row + 2)(Col + W / 4 .. Col + W / 2) :=
+               (others => '-');
+            A (Row + 3)(Col + W / 4) := '|';
+            Do_It (Left, Row + 4, Col, W / 2);
+         end if;
+         if Is_Empty (Right) then
+            null;
+         else
+            A (Row + 2)(Col + W / 2 .. Col + 3 * W / 4) :=
+               (others => '-');
+            A (Row + 3)(Col + 3 * W / 4) := '|';
+            Do_It (Right, Row + 4, Col + W / 2, (W + 1) / 2);
+         end if;
       end Do_It;
    begin
       if Max_Width > Page.Width then
