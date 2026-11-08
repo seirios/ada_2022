@@ -12,6 +12,13 @@ From these .drn files, .ads/.adb files are generated using a custom Ada code gen
 
 Each .drn file corresponds to a compilation unit, i.e., a package or task or standalone subprogram.
 
+Each .drn file has a description with the following optional sections:
+
++ `spec_header`, placed at the top of the .ads file
++ `spec_footer`, placed at the bottom of the .ads file
++ `body_header`, placed at the top of the .adb file
++ `body_footer`, placed at the bottom of the .adb file
+
 ### Diagrams
 
 Diagrams inside a .drn file correspond to subprograms (functions or procedures), types or general declarations.
@@ -30,6 +37,8 @@ Diagrams consist of the following:
 + Select icons
 + If icons
 + Lines connecting icons
+
+Each diagram has a description with the same optional sections as above.
 
 ### Parameter box
 
@@ -63,13 +72,12 @@ Declaration visibility is controlled by three keywords present in the parameter 
 
 The following conflicts exist:
 
-+ `visible` and `local` are forbidden
-+ `visible` and `private` are forbidden
++ `visible` and `local` is forbidden
++ `visible` and `private` is forbidden
 
 The following considerations apply:
 
 + Subprograms implicitly default to `local`, while types implicitly default to `visible`.
-+ A `local` subprogram has its declaration near the top of the body, and its definition below.
 + A `private` and `local` type has its declaration only in the private part (no `is private` in the visible part).
 
 ### Declaration order
