@@ -2,12 +2,6 @@
 with Ada.Text_IO; use Ada.Text_IO;
 package body Test_Cases is
 
-   procedure Multi_Is;
-
-   function Simple_Expr_Func (
-      X : Integer
-   ) return Integer;
-
    procedure Multi_Is
    is
       A : constant Integer := 0;
