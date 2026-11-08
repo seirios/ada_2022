@@ -2,6 +2,9 @@
 with Ada.Text_IO; use Ada.Text_IO;
 package body Test_Cases is
 
+   type Local_Type is
+      range 0 .. 1;
+
    procedure Multi_Is
    is
       A : constant Integer := 0;
