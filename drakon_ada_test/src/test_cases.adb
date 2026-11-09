@@ -17,6 +17,12 @@ package body Test_Cases is
       null;
    end Multi_Is;
 
+   procedure Null_Procedure (
+      X : Integer;
+      Y : Integer
+   )
+   is null;
+
    function Simple_Expr_Func (
       X : Integer
    ) return Integer
