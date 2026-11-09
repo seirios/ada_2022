@@ -5,6 +5,7 @@ package body Geometry.Magic is
       OC : Object'Class
    ) return Float
    is begin
+      --  Item 12
       return OC.MI + OC.Area * OC.Distance**2;
    end MO;
 
@@ -12,6 +13,7 @@ package body Geometry.Magic is
       OC : Object'Class
    ) return Float
    is begin
+      --  Item 6
       return OC.X_Coord * OC.Area;
    end Moment;
 end Geometry.Magic;

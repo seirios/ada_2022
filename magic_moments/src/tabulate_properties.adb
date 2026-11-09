@@ -7,16 +7,21 @@ with Ada.Float_Text_IO; use Ada.Float_Text_IO;
       The_List : List
    )
    is
+      --  Item 6
       Local : access Cell := The_List;
       This_One : Pointer;
    begin
+      --  Item 7
       New_Line;
       Put ("          X       Y       Area   " &
          "   MI        MO         Moment");
       New_Line;
+      --  Item 8
       while Local /= null
       loop
+         --  Item 10
          This_One := Local.Element;
+         --  Item 11
          New_Line;
          Put (This_One.Name); Set_Col (10);
          Put (This_One.X_Coord, 4, 2, 0); Put (' ');
@@ -25,6 +30,7 @@ with Ada.Float_Text_IO; use Ada.Float_Text_IO;
          Put (This_One.MI, 6, 2, 0); Put (' ');
          Put (MO (This_One.all), 6, 2, 0); Put (' ');
          Put (Moment (This_One.all), 6, 2, 0);
+         --  Item 12
          Local := Local.Next;
       end loop;
    end Tabulate_Properties;

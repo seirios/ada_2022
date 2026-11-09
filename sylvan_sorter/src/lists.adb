@@ -6,15 +6,21 @@ package body Lists is
       Second : List
    )
    is
+      --  Item 43
       Local : access Cell := First;
    begin
+      --  Item 44
       if First = null then
+         --  Item 47
          First := Second;
       else
+         --  Item 48
          while Local.Next /= null
          loop
+            --  Item 51
             Local := Local.Next;
          end loop;
+         --  Item 50
          Local.Next := Second;
       end if;
    end Append;
@@ -23,6 +29,7 @@ package body Lists is
       L : out List
    )
    is begin
+      --  Item 24
       L := null;
    end Clear;
 
@@ -30,6 +37,7 @@ package body Lists is
       L : List
    ) return Boolean
    is begin
+      --  Item 18
       return L = null;
    end Is_Empty;
 
@@ -37,6 +45,7 @@ package body Lists is
       V : Integer
    ) return List
    is begin
+      --  Item 30
       return new Cell'(null, V);
    end Make_List;
 
@@ -45,7 +54,9 @@ package body Lists is
       V : out Integer
    )
    is begin
+      --  Item 36
       V := L.Value;
+      --  Item 37
       L := List (L.Next);
    end Take_From_List;
 end Lists;

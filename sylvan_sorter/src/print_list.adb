@@ -8,22 +8,31 @@ with Ada.Text_IO, Ada.Integer_Text_IO; use Ada;
       Max_Value : Integer
    )
    is
+      --  Item 6
       Temp : List := L;
       Value : Integer;
       Count : Integer := 0;
       Field : constant Integer :=
          Num_Size (Max_Value);
    begin
+      --  Item 7
       Text_IO.New_Line;
       loop
+         --  Item 9
          exit when Is_Empty (Temp);
+         --  Item 12
          Take_From_List (Temp, Value);
+         --  Item 13
          Count := Count + Field;
+         --  Item 15
          if Count > Page.Width then
+            --  Item 18
             Text_IO.New_Line;
             Count := Field;
          end if;
+         --  Item 14
          Integer_Text_IO.Put (Value, Field);
       end loop;
+      --  Item 8
       Text_IO.New_Line (2);
    end Print_List;

@@ -6,6 +6,7 @@ package body Geometry.Lists is
       Obj_Ptr : Pointer
    )
    is begin
+      --  Item 24
       The_List := new Cell'(The_List, Obj_Ptr);
    end Add_To_List;
 end Geometry.Lists;

@@ -6,6 +6,7 @@ package body Geometry.Points is
       P : Point
    ) return Float
    is begin
+      --  Item 6
       return 0.0;
    end Area;
 
@@ -14,6 +15,7 @@ package body Geometry.Points is
       P : Point
    ) return Float
    is begin
+      --  Item 12
       return 0.0;
    end MI;
 
@@ -22,6 +24,7 @@ package body Geometry.Points is
       P : Point
    ) return String
    is begin
+      --  Item 18
       return "Point";
    end Name;
 end Geometry.Points;

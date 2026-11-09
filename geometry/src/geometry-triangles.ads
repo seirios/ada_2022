@@ -2,6 +2,7 @@
 package Geometry.Triangles is
 
    type Triangle is
+      --  Item 24
       new Object with
       record
          A, B, C : Float;

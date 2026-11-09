@@ -6,18 +6,25 @@ with Ada.Text_IO; use Ada.Text_IO;
 
    procedure Magic_Moments
    is
+      --  Item 6
       The_List : List := null;
    begin
+      --  Item 7
       Put ("Welcome to Magic Moments");
       New_Line (2);
+      --  Item 8
       Put ("Enter C, T or S followed by " &
          "coords and dimensions");
       New_Line;
+      --  Item 9
       Put ("Terminate list with any other letter");
       New_Line (2);
+      --  Item 10
       Build_List (The_List);
+      --  Item 11
       Tabulate_Properties (The_List);
       New_Line (2);
+      --  Item 12
       Put ("Finished");
       New_Line;
       Skip_Line (2);

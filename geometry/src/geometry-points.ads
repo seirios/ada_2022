@@ -2,6 +2,7 @@
 package Geometry.Points is
 
    type Point is
+      --  Item 24
       new Object with
       null record;
 

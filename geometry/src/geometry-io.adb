@@ -8,48 +8,60 @@ package body Geometry.IO is
 
    function Get_Circle return Lists.Pointer
    is
+      --  Item 6
       use Circles;
       X_Coord : Float;
       Y_Coord : Float;
       Radius : Float;
    begin
+      --  Item 7
       Get (X_Coord);
       Get (Y_Coord);
       Get (Radius);
+      --  Item 8
       return new Circle'(X_Coord, Y_Coord, Radius);
    end Get_Circle;
 
    function Get_Square return Lists.Pointer
    is
+      --  Item 14
       use Squares;
       X_Coord : Float;
       Y_Coord : Float;
       Side : Float;
    begin
+      --  Item 15
       Get (X_Coord);
       Get (Y_Coord);
       Get (Side);
+      --  Item 16
       return new Square'(X_Coord, Y_Coord, Side);
    end Get_Square;
 
    function Get_Triangle return Lists.Pointer
    is
+      --  Item 22
       use Triangles;
       X_Coord : Float;
       Y_Coord : Float;
       A, B, C : Float;
    begin
+      --  Item 23
       Get (X_Coord);
       Get (Y_Coord);
       loop
+         --  Item 25
          Get (A); Get (B); Get (C);
+         --  Item 33
          exit when A < B + C and then
             B < C + A and then
             C < A + B;
+         --  Item 29
          Put ("Sorry, not a triangle, " &
             "enter sides again please");
          New_Line;
       end loop;
+      --  Item 24
       return new Triangle'(X_Coord, Y_Coord,
          A, B, C);
    end Get_Triangle;

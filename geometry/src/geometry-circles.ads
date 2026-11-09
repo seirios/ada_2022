@@ -2,6 +2,7 @@
 package Geometry.Circles is
 
    type Circle is
+      --  Item 24
       new Object with
       record
          Radius : Float;

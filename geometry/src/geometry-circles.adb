@@ -7,6 +7,7 @@ package body Geometry.Circles is
       C : Circle
    ) return Float
    is begin
+      --  Item 6
       return Ada.Numerics.Pi * C.Radius**2;
    end Area;
 
@@ -15,6 +16,7 @@ package body Geometry.Circles is
       C : Circle
    ) return Float
    is begin
+      --  Item 12
       return 0.5 * C.Area * C.Radius**2;
    end MI;
 
@@ -23,6 +25,7 @@ package body Geometry.Circles is
       C : Circle
    ) return String
    is begin
+      --  Item 18
       return "Circle";
    end Name;
 end Geometry.Circles;

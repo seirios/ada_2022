@@ -6,24 +6,34 @@ with Ada.Text_IO; use Ada.Text_IO;
       The_List : in out Lists.List
    )
    is
+      --  Item 6
       Code_Letter : Character;
       Object_Ptr : Lists.Pointer;
    begin
       loop
          loop
+            --  Item 11
             Get (Code_Letter);
+            --  Item 12
             exit when Code_Letter /= ' ';
          end loop;
+         --  Item 18
          case Code_Letter is
          when 'C' | 'c' =>
+            --  Item 29
             Object_Ptr := Get_Circle;
          when 'T' | 't' =>
+            --  Item 30
             Object_Ptr := Get_Triangle;
          when 'S' | 's' =>
+            --  Item 31
             Object_Ptr := Get_Square;
          when others =>
+            --  Item 34
             exit;
          end case;
+         --  Item 16
          Lists.Add_To_List (The_List, Object_Ptr);
+         --  Item 36
       end loop;
    end Build_List;

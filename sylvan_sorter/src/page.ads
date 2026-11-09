@@ -3,5 +3,6 @@ package Page is
    Width : constant Integer := 40;
 
    subtype Line is
+      --  Item 6
       String (1 .. Width);
 end Page;

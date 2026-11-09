@@ -2,6 +2,7 @@
 package Geometry.Lists is
 
    type Pointer is
+      --  Item 27
       access Object'Class;
 
    type Cell is
@@ -11,6 +12,7 @@ package Geometry.Lists is
       end record;
 
    type List is
+      --  Item 28
       access Cell;
 
    procedure Add_To_List (

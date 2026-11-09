@@ -8,8 +8,10 @@ package body Geometry.Triangles is
       T : Triangle
    ) return Float
    is
+      --  Item 26
       S : constant Float := 0.5 * (T.A + T.B + T.C);
    begin
+      --  Item 6
       return Sqrt (S * (S - T.A) * (S - T.B) * (S - T.C));
    end Area;
 
@@ -18,6 +20,7 @@ package body Geometry.Triangles is
       T : Triangle
    ) return Float
    is begin
+      --  Item 12
       return T.Area * (T.A**2 + T.B**2 + T.C**2) / 36.0;
    end MI;
 
@@ -26,6 +29,7 @@ package body Geometry.Triangles is
       T : Triangle
    ) return String
    is begin
+      --  Item 18
       return "Triangle";
    end Name;
 end Geometry.Triangles;

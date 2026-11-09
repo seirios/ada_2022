@@ -7,6 +7,7 @@ package body Geometry is
       O : Object
    ) return Float
    is begin
+      --  Item 11
       return Sqrt (O.X_Coord**2 + O.Y_Coord**2);
    end Distance;
 end Geometry;

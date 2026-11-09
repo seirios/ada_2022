@@ -7,15 +7,23 @@ use Lists, Trees;
       L : out List
    )
    is
+      --  Item 6
       Right_L : List;
    begin
+      --  Item 7
       if Is_Empty (T) then
+         --  Item 10
          Clear (L);
+         --  Item 11
          return;
       else
+         --  Item 12
          Convert_Tree_To_List (Left_Subtree (T), L);
+         --  Item 13
          Append (L, Make_List (Node_Value (T)));
+         --  Item 14
          Convert_Tree_To_List (Right_Subtree (T), Right_L);
+         --  Item 15
          Append (L, Right_L);
       end if;
    end Convert_Tree_To_List;

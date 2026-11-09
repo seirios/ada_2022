@@ -5,6 +5,7 @@ package body Trees is
       T : out Tree
    )
    is begin
+      --  Item 24
       T := null;
    end Clear;
 
@@ -12,9 +13,12 @@ package body Trees is
       T : Tree
    ) return Integer
    is begin
+      --  Item 43
       if T = null then
+         --  Item 46
          return 0;
       else
+         --  Item 47
          return 1 + Integer'Max (
             Depth (T.Left),
             Depth (T.Right));
@@ -26,12 +30,17 @@ package body Trees is
       V : Integer
    )
    is begin
+      --  Item 30
       if T = null then
+         --  Item 35
          T := new Node'(null, null, V);
       else
+         --  Item 33
          if V < T.Value then
+            --  Item 36
             Insert (T.Left, V);
          else
+            --  Item 37
             Insert (T.Right, V);
          end if;
       end if;
@@ -41,6 +50,7 @@ package body Trees is
       T : Tree
    ) return Boolean
    is begin
+      --  Item 18
       return T = null;
    end Is_Empty;
 
@@ -48,6 +58,7 @@ package body Trees is
       T : Tree
    ) return Tree
    is begin
+      --  Item 53
       return T.Left;
    end Left_Subtree;
 
@@ -55,6 +66,7 @@ package body Trees is
       T : Tree
    ) return Integer
    is begin
+      --  Item 65
       return T.Value;
    end Node_Value;
 
@@ -62,6 +74,7 @@ package body Trees is
       T : Tree
    ) return Tree
    is begin
+      --  Item 59
       return T.Right;
    end Right_Subtree;
 end Trees;

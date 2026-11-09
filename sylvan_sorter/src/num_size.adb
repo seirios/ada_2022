@@ -4,5 +4,6 @@
       N : Integer
    ) return Integer
    is begin
+      --  Item 6
       return Integer'Image (N)'Length;
    end Num_Size;

@@ -2,6 +2,7 @@
 package Geometry.Squares is
 
    type Square is
+      --  Item 24
       new Object with
       record
          Side : Float;

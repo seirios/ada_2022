@@ -2,9 +2,11 @@
 package Test_Cases is
 
    type Simple_Type_Before is
+      --  Item 291
       new Positive;
 
    type Simple_Array is
+      --  Item 289
       array (1 .. 10) of Integer
       with Default_Component_Value => 0;
 
@@ -19,6 +21,7 @@ package Test_Cases is
       null record;
 
    type Simple_Type is
+      --  Item 290
       new Integer;
 
    type Simple_Type_Enum is
@@ -26,6 +29,7 @@ package Test_Cases is
       with Default_Value => Red;
 
    subtype Simple_Subtype is
+      --  Item 117
       Simple_Type range 0 .. 10;
 
    procedure Declare_Block;

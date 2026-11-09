@@ -35,6 +35,7 @@ private
 
    type Node;
    type Tree is
+      --  Item 17
       access Node;
 
    type Node is

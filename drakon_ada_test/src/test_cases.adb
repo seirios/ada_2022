@@ -3,13 +3,17 @@ with Ada.Text_IO; use Ada.Text_IO;
 package body Test_Cases is
 
    type Local_Type is
+      --  Item 298
       range 0 .. 1;
 
    procedure Multi_Is
    is
+      --  Item 225
       A : constant Integer := 0;
+      --  Item 226
       B : Integer := 1;
    begin
+      --  Item 227
       null;
    end Multi_Is;
 
@@ -17,31 +21,41 @@ package body Test_Cases is
       X : Integer
    ) return Integer
    is
+      --  Item 265
       (if X > 0 then 1 elsif X < 0 then -1 else 0);
 
    procedure Declare_Block
    is begin
       declare
+         --  Item 70
          J : Integer := 0;
       begin
+         --  Item 71
          J := J + 1;
+         --  Item 73
          Put_Line (J'Image);
       end;
    end Declare_Block;
 
    procedure Declare_Block_Named_Nested
    is begin
+      --  Item 274
       Outer :
       declare
+         --  Item 79
          J : constant Integer := 0;
       begin
+         --  Item 85
          Put_Line (J'Image);
          declare
+            --  Item 82
             K : Integer := 0;
             J : constant Integer := 1;
             L : constant Integer := Outer.J;
          begin
+            --  Item 83
             K := L + 1;
+            --  Item 86
             Put_Line (K'Image);
          end;
       end Outer;
@@ -50,14 +64,20 @@ package body Test_Cases is
    procedure Declare_Block_Nested
    is begin
       declare
+         --  Item 56
          J : Integer := 0;
       begin
+         --  Item 57
          J := J + 1;
+         --  Item 63
          Put_Line (J'Image);
          declare
+            --  Item 59
             K : Integer := 0;
          begin
+            --  Item 60
             K := J + 1;
+            --  Item 64
             Put_Line (K'Image);
          end;
       end;
@@ -74,12 +94,17 @@ package body Test_Cases is
 
    procedure For_Loop
    is
+      --  Item 155
       Last : Integer;
    begin
+      --  Item 156
       for I in 0 .. 4
       loop
+         --  Item 158
          Put_Line (I'Image);
+         --  Item 159
          if I = 3 then
+            --  Item 162
             Last := I;
             exit;
          end if;
@@ -88,25 +113,36 @@ package body Test_Cases is
 
    procedure For_Loop_Continue
    is begin
+      --  Item 281
       for I in 0 .. 10
       loop
+         --  Item 285
          if I mod 2 = 0 then
+            --  Item 292
             goto Continue;
          end if;
+         --  Item 283
          Put_Line (I'Image);
+         --  Item 284
          <<Continue>>
       end loop;
    end For_Loop_Continue;
 
    procedure For_Loop_Named_Nested
    is begin
+      --  Item 273
       Outer :
+      --  Item 168
       for I in 0 .. 6
       loop
+         --  Item 171
          for J in 0 .. 6
          loop
+            --  Item 170
             Put_Line (I'Image & J'Image);
+            --  Item 173
             if J = 3 then
+               --  Item 176
                exit Outer;
             end if;
          end loop;
@@ -115,13 +151,16 @@ package body Test_Cases is
 
    procedure For_Loop_Nested_When
    is begin
+      --  Item 213
       for I in 0 .. 4
          when I < 3
       loop
+         --  Item 217
          for J in 0 .. 4
             when J < 3 and then
                J >= 1
          loop
+            --  Item 215
             Put_Line (I'Image & J'Image);
          end loop;
       end loop;
@@ -129,9 +168,11 @@ package body Test_Cases is
 
    procedure For_Loop_When
    is begin
+      --  Item 203
       for I in 0 .. 4
          when I < 3
       loop
+         --  Item 205
          Put_Line (I'Image);
       end loop;
    end For_Loop_When;
@@ -140,10 +181,13 @@ package body Test_Cases is
       C : Boolean
    )
    is begin
+      --  Item 136
       case C is
       when True =>
+         --  Item 144
          Put_Line ("Is True");
       when False =>
+         --  Item 145
          Put_Line ("Is False");
       end case;
    end Select_Bool;
@@ -152,12 +196,16 @@ package body Test_Cases is
       C : Character
    )
    is begin
+      --  Item 28
       case C is
       when 'A' =>
+         --  Item 36
          Put_Line ("Is A");
       when 'B' =>
+         --  Item 37
          Put_Line ("Is B");
       when others =>
+         --  Item 38
          Put_Line ("Is neither A nor B");
       end case;
    end Select_Char;
@@ -166,20 +214,29 @@ package body Test_Cases is
       C : Character
    )
    is
+      --  Item 109
       Ret : constant Boolean := True;
    begin
+      --  Item 97
       case C is
       when 'S' =>
+         --  Item 92
          if Ret then
+            --  Item 94
             Put_Line ("procedure");
          else
+            --  Item 95
             Put_Line ("function");
          end if;
       when 'T' =>
+         --  Item 108
          Put_Line ("type");
+         --  Item 107
          Put_Line ("type");
       when 'Y' =>
+         --  Item 106
          Put_Line ("subtype");
+         --  Item 107
          Put_Line ("type");
       when others =>
          null;
@@ -188,23 +245,31 @@ package body Test_Cases is
 
    procedure Simple_Loop
    is
+      --  Item 21
       Iter : Integer := 0;
    begin
       loop
+         --  Item 17
          exit when Iter >= 5;
+         --  Item 20
          Put_Line (Iter'Image);
+         --  Item 22
          Iter := Iter + 1;
       end loop;
    end Simple_Loop;
 
    procedure Simple_Loop_Negate
    is
+      --  Item 10
       Iter : Integer := 0;
    begin
       loop
+         --  Item 6
          exit when not (Iter < 5 and then
             Iter >= 0);
+         --  Item 9
          Put_Line (Iter'Image);
+         --  Item 11
          Iter := Iter + 1;
       end loop;
    end Simple_Loop_Negate;

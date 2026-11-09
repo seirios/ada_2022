@@ -33,5 +33,6 @@ private
       end record;
 
    type List is
+      --  Item 11
       access all Cell;
 end Lists;

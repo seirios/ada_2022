@@ -8,6 +8,7 @@ with Ada.Text_IO; use Ada;
       Max_Value : Integer
    )
    is
+      --  Item 6
       Max_Width : Integer :=
          Num_Size (Max_Value) * 2 ** (Depth (T) - 1);
       A : array (1 .. 4 * Depth (T) - 3) of Page.Line :=
@@ -17,17 +18,22 @@ with Ada.Text_IO; use Ada;
          N, Row, Col, Width : Integer
       )
       is
+         --  Item 59
          Size : Integer := Num_Size (N);
          Offset : Integer := (Width - Size + 1) / 2;
          Digit : Integer;
          Number : Integer := N;
       begin
+         --  Item 60
          if Size > Width then
+            --  Item 64
             for I in 1 .. Integer'Max (Width, 1)
             loop
+               --  Item 66
                A (Row)(Col + I - 1) := '*';
             end loop;
          else
+            --  Item 63
             A (Row)(Col + Offset .. Col + Offset + Size - 1) :=
                Integer'Image (Number);
          end if;
@@ -38,42 +44,60 @@ with Ada.Text_IO; use Ada;
          Row, Col, W : Integer
       )
       is
+         --  Item 72
          Left : Tree := Left_Subtree (T);
          Right : Tree := Right_Subtree (T);
       begin
+         --  Item 73
          Put (Node_Value (T), Row, Col, W);
+         --  Item 74
          if Is_Empty (Left) and Is_Empty (Right) then
             null;
          else
+            --  Item 77
             A (Row + 1)(Col + W / 2) := '|';
          end if;
+         --  Item 78
          if Is_Empty (Left) then
             null;
          else
+            --  Item 84
             A (Row + 2)(Col + W / 4 .. Col + W / 2) :=
                (others => '-');
+            --  Item 85
             A (Row + 3)(Col + W / 4) := '|';
+            --  Item 86
             Do_It (Left, Row + 4, Col, W / 2);
          end if;
+         --  Item 81
          if Is_Empty (Right) then
             null;
          else
+            --  Item 87
             A (Row + 2)(Col + W / 2 .. Col + 3 * W / 4) :=
                (others => '-');
+            --  Item 88
             A (Row + 3)(Col + 3 * W / 4) := '|';
+            --  Item 89
             Do_It (Right, Row + 4, Col + W / 2, (W + 1) / 2);
          end if;
       end Do_It;
    begin
+      --  Item 7
       if Max_Width > Page.Width then
+         --  Item 10
          Max_Width := Page.Width;
       end if;
+      --  Item 11
       Do_It (T, 1, 1, Max_Width);
       Text_IO.New_Line;
+      --  Item 13
       for I in A'Range
       loop
+         --  Item 15
          Text_IO.New_Line;
          Text_IO.Put (A (I));
       end loop;
+      --  Item 12
       Text_IO.New_Line (2);
    end Print_Tree;

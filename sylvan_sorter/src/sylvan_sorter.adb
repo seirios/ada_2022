@@ -7,24 +7,36 @@ with Ada.Text_IO; use Ada.Text_IO;
 
    procedure Sylvan_Sorter
    is
+      --  Item 6
       The_List : Lists.List;
       The_Tree : Trees.Tree;
       Max_Value : Integer;
    begin
+      --  Item 7
       Put ("Welcome to the Sylvan Sorter");
       New_Line (2);
       loop
+         --  Item 11
          Put_Line ("Enter list of positive integers" &
             " ending with 0");
+         --  Item 12
          Read_List (The_List, Max_Value);
+         --  Item 13
          exit when Lists.Is_Empty (The_List);
+         --  Item 16
          Print_List (The_List, Max_Value);
+         --  Item 17
          Convert_List_To_Tree (The_List, The_Tree);
+         --  Item 18
          Print_Tree (The_Tree, Max_Value);
+         --  Item 19
          Convert_Tree_To_List (The_Tree, The_List);
+         --  Item 20
          Print_List (The_List, Max_Value);
       end loop;
+      --  Item 9
       New_Line;
+      --  Item 10
       Put_Line ("Finished");
       Skip_Line (2);
    end Sylvan_Sorter;

@@ -7,16 +7,24 @@ with Ada.Integer_Text_IO; use Ada;
       Max_Value : out Integer
    )
    is
+      --  Item 6
       Value : Integer;
    begin
+      --  Item 7
       Max_Value := 0;
+      --  Item 8
       Clear (L);
       loop
+         --  Item 12
          Integer_Text_IO.Get (Value);
+         --  Item 9
          exit when Value <= 0;
+         --  Item 14
          if Value > Max_Value then
+            --  Item 17
             Max_Value := Value;
          end if;
+         --  Item 13
          Append (L, Make_List (Value));
       end loop;
    end Read_List;
