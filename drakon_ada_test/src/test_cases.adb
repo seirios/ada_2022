@@ -23,6 +23,9 @@ package body Test_Cases is
    )
    is null;
 
+   function Separate_Function return Integer
+   is separate;
+
    function Simple_Expr_Func (
       X : Integer
    ) return Integer
