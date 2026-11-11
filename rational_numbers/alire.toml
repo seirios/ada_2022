@@ -1,0 +1,10 @@
+name = "rational_numbers"
+description = "Rational_Numbers package for Rational Reckoner example program"
+version = "0.1.0-dev"
+
+authors = ["SBP"]
+maintainers = ["SBP <seirios@ik.me>"]
+maintainers-logins = ["Seirios"]
+licenses = "MIT"
+website = ""
+tags = []
