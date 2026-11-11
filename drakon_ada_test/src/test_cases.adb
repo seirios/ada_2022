@@ -287,4 +287,21 @@ package body Test_Cases is
    is begin
       return False;
    end Simple_Return;
+
+   procedure Simple_Nested_Function (
+      X : Integer
+   )
+   is
+
+      function Nested_Function (
+         X : Integer
+      ) return Integer
+      is begin
+         --  Item 332
+         return X + 1;
+      end Nested_Function;
+   begin
+      --  Item 339
+      Put_Line (Nested_Function (X)'Image);
+   end Simple_Nested_Function;
 end Test_Cases;

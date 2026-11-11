@@ -76,6 +76,10 @@ package Test_Cases is
 
    function Simple_Return return Boolean;
 
+   procedure Simple_Nested_Function (
+      X : Integer
+   );
+
 private
 
    type Limited_Private_Type is

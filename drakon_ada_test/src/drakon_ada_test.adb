@@ -40,4 +40,7 @@ begin
 
    Put_Line ("Declare_Block_Named_Nested");
    Test_Cases.Declare_Block_Named_Nested;
+
+   Put_Line ("Simple_Nested_Function");
+   Test_Cases.Simple_Nested_Function (0);
 end Drakon_Ada_Test;
