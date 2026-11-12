@@ -2,11 +2,11 @@
 package Rational_Numbers is
    type Rational is private;
 
-   function unary_minus (
+   function "-" (
       X : Rational
    ) return Rational;
 
-   function unary_plus (
+   function "+" (
       X : Rational
    ) return Rational;
 

@@ -1,12 +1,13 @@
+SUBDIRS := drakon_ada_test \
+	   geometry \
+	   magic_moments \
+	   sylvan_sorter \
+	   rational_numbers
+
 .PHONY: regen
 regen:
-	cd drakon_ada_test/src && $(MAKE)
-	cd geometry/src && $(MAKE)
-	cd magic_moments/src && $(MAKE)
-	cd sylvan_sorter/src && $(MAKE)
+	$(foreach _,$(SUBDIRS),(cd $_/src && $(MAKE));)
 
 .PHONY: build
 build:
-	cd drakon_ada_test && alr build
-	cd magic_moments && alr build
-	cd sylvan_sorter && alr build
+	$(foreach _,$(SUBDIRS),(cd $_/src && alr build);)
