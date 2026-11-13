@@ -7,7 +7,6 @@ use Lists, Trees;
       L : out List
    )
    is
-      --  Item 6
       Right_L : List;
    begin
       --  Item 7

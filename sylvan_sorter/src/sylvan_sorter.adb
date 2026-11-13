@@ -7,7 +7,6 @@ with Ada.Text_IO; use Ada.Text_IO;
 
    procedure Sylvan_Sorter
    is
-      --  Item 6
       The_List : Lists.List;
       The_Tree : Trees.Tree;
       Max_Value : Integer;

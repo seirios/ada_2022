@@ -1,8 +1,8 @@
 DRN_FILES := $(wildcard *.drn)
 ADB_FILES := $(subst .drn,.adb,$(DRN_FILES))
 
-ADB_FILES := $(filter-out page.adb,$(ADB_FILES))
 ADS_FILES := page.ads
+ADB_FILES := $(filter-out $(subst .ads,.adb,$(ADS_FILES)),$(ADB_FILES))
 
 .PHONY: all
 all: $(ADB_FILES) $(ADS_FILES)

@@ -7,7 +7,6 @@ with Ada.Integer_Text_IO; use Ada;
       Max_Value : out Integer
    )
    is
-      --  Item 6
       Value : Integer;
    begin
       --  Item 7

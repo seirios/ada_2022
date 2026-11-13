@@ -8,7 +8,6 @@ package body Geometry.Triangles is
       T : Triangle
    ) return Float
    is
-      --  Item 26
       S : constant Float := 0.5 * (T.A + T.B + T.C);
    begin
       --  Item 6

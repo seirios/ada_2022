@@ -8,7 +8,6 @@ with Ada.Text_IO, Ada.Integer_Text_IO; use Ada;
       Max_Value : Integer
    )
    is
-      --  Item 6
       Temp : List := L;
       Value : Integer;
       Count : Integer := 0;

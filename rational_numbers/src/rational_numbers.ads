@@ -2,6 +2,35 @@
 package Rational_Numbers is
    type Rational is private;
 
+   function Denominator (
+      R : Rational
+   ) return Positive;
+
+   function Numerator (
+      R : Rational
+   ) return Integer;
+
+   function "+" (
+      X, Y : Rational
+   ) return Rational;
+
+   function "/" (
+      X, Y : Rational
+   ) return Rational;
+
+   function "*" (
+      X, Y : Rational
+   ) return Rational;
+
+   function "-" (
+      X, Y : Rational
+   ) return Rational;
+
+   function "/" (
+      X : Integer;
+      Y : Positive
+   ) return Rational;
+
    function "-" (
       X : Rational
    ) return Rational;

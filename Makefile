@@ -2,7 +2,8 @@ SUBDIRS := drakon_ada_test \
 	   geometry \
 	   magic_moments \
 	   sylvan_sorter \
-	   rational_numbers
+	   rational_numbers \
+	   rational_reckoner
 
 .PHONY: regen
 regen:

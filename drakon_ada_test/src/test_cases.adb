@@ -8,9 +8,7 @@ package body Test_Cases is
 
    procedure Multi_Is
    is
-      --  Item 225
       A : constant Integer := 0;
-      --  Item 226
       B : Integer := 1;
    begin
       --  Item 227
@@ -30,13 +28,11 @@ package body Test_Cases is
       X : Integer
    ) return Integer
    is
-      --  Item 265
       (if X > 0 then 1 elsif X < 0 then -1 else 0);
 
    procedure Declare_Block
    is begin
       declare
-         --  Item 70
          J : Integer := 0;
       begin
          --  Item 71
@@ -51,13 +47,11 @@ package body Test_Cases is
       --  Item 274
       Outer :
       declare
-         --  Item 79
          J : constant Integer := 0;
       begin
          --  Item 85
          Put_Line (J'Image);
          declare
-            --  Item 82
             K : Integer := 0;
             J : constant Integer := 1;
             L : constant Integer := Outer.J;
@@ -73,7 +67,6 @@ package body Test_Cases is
    procedure Declare_Block_Nested
    is begin
       declare
-         --  Item 56
          J : Integer := 0;
       begin
          --  Item 57
@@ -81,7 +74,6 @@ package body Test_Cases is
          --  Item 63
          Put_Line (J'Image);
          declare
-            --  Item 59
             K : Integer := 0;
          begin
             --  Item 60
@@ -103,7 +95,6 @@ package body Test_Cases is
 
    procedure For_Loop
    is
-      --  Item 155
       Last : Integer;
    begin
       --  Item 156
@@ -223,7 +214,6 @@ package body Test_Cases is
       C : Character
    )
    is
-      --  Item 109
       Ret : constant Boolean := True;
    begin
       --  Item 97
@@ -254,7 +244,6 @@ package body Test_Cases is
 
    procedure Simple_Loop
    is
-      --  Item 21
       Iter : Integer := 0;
    begin
       loop
@@ -269,7 +258,6 @@ package body Test_Cases is
 
    procedure Simple_Loop_Negate
    is
-      --  Item 10
       Iter : Integer := 0;
    begin
       loop

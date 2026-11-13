@@ -8,7 +8,6 @@ with Ada.Text_IO; use Ada;
       Max_Value : Integer
    )
    is
-      --  Item 6
       Max_Width : Integer :=
          Num_Size (Max_Value) * 2 ** (Depth (T) - 1);
       A : array (1 .. 4 * Depth (T) - 3) of Page.Line :=
@@ -18,7 +17,6 @@ with Ada.Text_IO; use Ada;
          N, Row, Col, Width : Integer
       )
       is
-         --  Item 59
          Size : Integer := Num_Size (N);
          Offset : Integer := (Width - Size + 1) / 2;
          Digit : Integer;
@@ -44,7 +42,6 @@ with Ada.Text_IO; use Ada;
          Row, Col, W : Integer
       )
       is
-         --  Item 72
          Left : Tree := Left_Subtree (T);
          Right : Tree := Right_Subtree (T);
       begin
