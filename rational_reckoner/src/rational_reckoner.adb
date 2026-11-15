@@ -25,21 +25,22 @@ with Ada.Text_IO; use Ada.Text_IO;
             --  Item 19
             Get (C);
             Process (C);
-            --  Item 21
-            exception
-            --  Item 22
+         --  Item 25
+         exception
             when Rat_Stack.Error =>
+               --  Item 22
                New_Line;
                Put_Line ("Stack over/underflow, " &
-                    "stack reset");
+                  "stack reset");
                Rat_Stack.Clear;
-            --  Item 23
             when Control_Error =>
+               --  Item 23
                New_Line;
                Put_Line ("Unexpected character, " &
-                    "not # + - * / ? ! or X");
-            --  Item 24
-            when Done => exit;
+                  "not # + - * / ? ! or X");
+            when Done =>
+               --  Item 32
+               exit;
          end;
       end loop;
       --  Item 11

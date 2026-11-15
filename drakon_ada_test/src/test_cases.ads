@@ -71,6 +71,10 @@ package Test_Cases is
 
    procedure For_Loop_When;
 
+   procedure Multi_Exception (
+      X : Integer
+   );
+
    procedure Select_Bool (
       C : Boolean
    );
@@ -81,6 +85,10 @@ package Test_Cases is
 
    procedure Select_Combined (
       C : Character
+   );
+
+   procedure Select_Exception (
+      X : Integer
    );
 
    procedure Simple_Begin;

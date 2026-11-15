@@ -184,6 +184,25 @@ package body Test_Cases is
       end loop;
    end For_Loop_When;
 
+   procedure Multi_Exception (
+      X : Integer
+   )
+   is begin
+      declare
+         A : Integer range 0 .. 2;
+      begin
+         --  Item 404
+         A := X;
+      exception
+         --  Item 405
+         when Constraint_Error =>
+            Put_Line ("Bad integer");
+         --  item 406
+         when Program_Error =>
+            Put_Line ("Bad program");
+      end;
+   end Multi_Exception;
+
    procedure Select_Bool (
       C : Boolean
    )
@@ -250,6 +269,25 @@ package body Test_Cases is
       end case;
    end Select_Combined;
 
+   procedure Select_Exception (
+      X : Integer
+   )
+   is begin
+      declare
+         A : Integer range 0 .. 2;
+      begin
+         --  Item 395
+         A := X;
+      --  Item 388
+      exception
+         when Constraint_Error =>
+            --  Item 394
+            Put_Line ("Bad integer");
+         when others =>
+            null;
+      end;
+   end Select_Exception;
+
    procedure Simple_Begin
    is begin
       begin
@@ -267,13 +305,10 @@ package body Test_Cases is
       begin
          --  Item 372
          A := X;
-      --  Item 363
       exception
+         --  Item 396
          when Constraint_Error =>
-            --  Item 371
             Put_Line ("Bad integer");
-         when others =>
-            null;
       end;
    end Simple_Exception;
 

@@ -13,9 +13,8 @@ separate (Rational_Reckoner.Process)
             IO.Get (R);
             --  Item 11
             exit;
-            --  Item 12
-            exception
-            --  Item 13
+         exception
+            --  Item 15
             when Data_Error =>
                Skip_Line;
                New_Line;
