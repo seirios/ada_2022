@@ -7,6 +7,7 @@ with Ada.Text_IO; use Ada.Text_IO;
       --  Item 6
       C : Character;
       Control_Error, Done : exception;
+      --  item 7
       procedure Process (C : Character)
          is separate;
    begin

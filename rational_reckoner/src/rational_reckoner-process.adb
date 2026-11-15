@@ -9,6 +9,7 @@ separate (Rational_Reckoner)
    is
       --  Item 6
       R : Rational;
+      --  item 7
       procedure Get_Rational (R : out Rational)
          is separate;
    begin

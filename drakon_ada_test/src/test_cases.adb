@@ -10,6 +10,7 @@ package body Test_Cases is
    is
       --  Item 225
       A : constant Integer := 0;
+      --  item 226
       B : Integer := 1;
    begin
       --  Item 227
