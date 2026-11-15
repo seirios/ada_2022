@@ -273,6 +273,7 @@ package body Test_Cases is
 
    function Simple_Return return Boolean
    is begin
+      --  Item 341
       return False;
    end Simple_Return;
 
@@ -280,6 +281,7 @@ package body Test_Cases is
       X : Integer
    )
    is
+      Y : Integer := X + 1;
 
       function Nested_Function (
          X : Integer
@@ -290,6 +292,6 @@ package body Test_Cases is
       end Nested_Function;
    begin
       --  Item 339
-      Put_Line (Nested_Function (X)'Image);
+      Put_Line (Nested_Function (Y)'Image);
    end Simple_Nested_Function;
 end Test_Cases;
