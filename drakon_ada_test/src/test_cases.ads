@@ -23,6 +23,7 @@ package Test_Cases is
          A : Integer;
          B : Character;
       end record;
+      --  Item 343
       for Simple_Record'Size use 64;
 
    type Simple_Record_Null is
