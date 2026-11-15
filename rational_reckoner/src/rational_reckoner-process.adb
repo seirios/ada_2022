@@ -7,6 +7,7 @@ separate (Rational_Reckoner)
       C : Character
    )
    is
+      --  Item 6
       R : Rational;
       procedure Get_Rational (R : out Rational)
          is separate;

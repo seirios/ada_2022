@@ -6,6 +6,7 @@ with Ada.Text_IO; use Ada.Text_IO;
 
    procedure Magic_Moments
    is
+      --  Item 6
       The_List : List := null;
    begin
       --  Item 7

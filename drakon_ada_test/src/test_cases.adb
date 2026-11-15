@@ -8,6 +8,7 @@ package body Test_Cases is
 
    procedure Multi_Is
    is
+      --  Item 225
       A : constant Integer := 0;
       B : Integer := 1;
    begin
@@ -28,6 +29,7 @@ package body Test_Cases is
       X : Integer
    ) return Integer
    is
+      --  Item 265
       (if X > 0 then 1 elsif X < 0 then -1 else 0);
 
    procedure Declare_Block
@@ -95,6 +97,7 @@ package body Test_Cases is
 
    procedure For_Loop
    is
+      --  Item 155
       Last : Integer;
    begin
       --  Item 156
@@ -214,6 +217,7 @@ package body Test_Cases is
       C : Character
    )
    is
+      --  Item 109
       Ret : constant Boolean := True;
    begin
       --  Item 97
@@ -244,6 +248,7 @@ package body Test_Cases is
 
    procedure Simple_Loop
    is
+      --  Item 21
       Iter : Integer := 0;
    begin
       loop
@@ -258,6 +263,7 @@ package body Test_Cases is
 
    procedure Simple_Loop_Negate
    is
+      --  Item 10
       Iter : Integer := 0;
    begin
       loop
@@ -281,7 +287,9 @@ package body Test_Cases is
       X : Integer
    )
    is
+      --  Item 342
       Y : Integer := X + 1;
+      --  Item 338
 
       function Nested_Function (
          X : Integer

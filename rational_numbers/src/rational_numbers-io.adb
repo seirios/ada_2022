@@ -8,6 +8,7 @@ package body Rational_Numbers.IO is
       X : out Rational
    )
    is
+      --  Item 11
       N : Integer;   --  numerator
       D : Integer;   --  denominator
       C : Character;

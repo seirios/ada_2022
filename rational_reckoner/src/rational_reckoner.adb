@@ -4,6 +4,7 @@ with Ada.Text_IO; use Ada.Text_IO;
 
    procedure Rational_Reckoner
    is
+      --  Item 6
       C : Character;
       Control_Error, Done : exception;
       procedure Process (C : Character)

@@ -5,6 +5,7 @@ private with Rat_Stack.Data;
 
    procedure Rat_Stack.Print_Top
    is
+      --  Item 6
       use Data;
    begin
       --  Item 7

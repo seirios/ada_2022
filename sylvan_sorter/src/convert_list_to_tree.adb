@@ -7,6 +7,7 @@ use Lists, Trees;
       T : out Tree
    )
    is
+      --  Item 6
       Temp : List := L;
       Value : Integer;
    begin

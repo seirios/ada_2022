@@ -34,6 +34,7 @@ package body Rational_Numbers is
       X, Y : Rational
    ) return Rational
    is
+      --  Item 43
       N : Integer := X.Num * Y.Den;
       D : Integer := X.Den * Y.Num;
    begin

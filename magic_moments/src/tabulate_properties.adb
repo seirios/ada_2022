@@ -7,6 +7,7 @@ with Ada.Float_Text_IO; use Ada.Float_Text_IO;
       The_List : List
    )
    is
+      --  Item 6
       Local : access Cell := The_List;
       This_One : Pointer;
    begin

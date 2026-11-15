@@ -19,6 +19,7 @@ package body Rational_Numbers.Slave is
       R : Rational
    ) return Rational
    is
+      --  Item 7
       G : Positive := GCD (abs R.Num, R.Den);
    begin
       --  Item 6

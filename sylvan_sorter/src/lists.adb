@@ -6,6 +6,7 @@ package body Lists is
       Second : List
    )
    is
+      --  Item 43
       Local : access Cell := First;
    begin
       --  Item 44
