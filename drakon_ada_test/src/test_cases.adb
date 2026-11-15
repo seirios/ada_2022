@@ -90,7 +90,10 @@ package body Test_Cases is
    function Extended_Return return Simple_Array
    is begin
       return A : Simple_Array do
-         for I in A'Range loop
+         --  Item 345
+         for I in A'Range
+         loop
+            --  Item 347
             A (I) := 1;
          end loop;
       end return;
