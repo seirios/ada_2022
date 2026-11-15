@@ -43,4 +43,7 @@ begin
 
    Put_Line ("Simple_Nested_Function");
    Test_Cases.Simple_Nested_Function (0);
+
+   Put_Line ("Simple_Exception");
+   Test_Cases.Simple_Exception (3);
 end Drakon_Ada_Test;

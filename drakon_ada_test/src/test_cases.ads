@@ -83,6 +83,10 @@ package Test_Cases is
       C : Character
    );
 
+   procedure Simple_Exception (
+      X : Integer
+   );
+
    procedure Simple_Loop;
 
    procedure Simple_Loop_Negate;

@@ -54,3 +54,5 @@ Declare_Block_Named_Nested
  1
 Simple_Nested_Function
  2
+Simple_Exception
+Bad integer

@@ -250,6 +250,25 @@ package body Test_Cases is
       end case;
    end Select_Combined;
 
+   procedure Simple_Exception (
+      X : Integer
+   )
+   is begin
+      declare
+         A : Integer range 0 .. 2;
+      begin
+         --  Item 372
+         A := X;
+      --  Item 363
+      exception
+         when Constraint_Error =>
+            --  Item 371
+            Put_Line ("Bad integer");
+         when others =>
+            null;
+      end;
+   end Simple_Exception;
+
    procedure Simple_Loop
    is
       --  Item 21
