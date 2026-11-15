@@ -5,6 +5,7 @@ package Geometry.Circles is
       --  Item 24
       new Object with
       record
+         --  Item 25
          Radius : Float;
       end record;
 

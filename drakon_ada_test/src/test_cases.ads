@@ -9,9 +9,20 @@ package Test_Cases is
 
    type Limited_Type is limited
       record
+         --  Item 321
          A : Integer;
          X : Float;
       end record;
+
+   type Multi_Record is
+      record
+         --  Item 353
+         A : Integer;
+         --  item 355
+         B : Character;
+      end record;
+      --  Item 354
+      for Multi_Record'Size use 64;
 
    type Simple_Array is
       --  Item 289
@@ -20,6 +31,7 @@ package Test_Cases is
 
    type Simple_Record is
       record
+         --  Item 196
          A : Integer;
          B : Character;
       end record;
@@ -85,6 +97,7 @@ private
 
    type Limited_Private_Type is
       record
+         --  Item 315
          X, Y : Integer;
       end record;
 

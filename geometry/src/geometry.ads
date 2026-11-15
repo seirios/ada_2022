@@ -3,6 +3,7 @@ package Geometry is
 
    type Object is abstract tagged
       record
+         --  Item 17
          X_Coord : Float;
          Y_Coord : Float;
       end record;

@@ -5,6 +5,7 @@ package Geometry.Triangles is
       --  Item 24
       new Object with
       record
+         --  Item 25
          A, B, C : Float;
       end record;
 

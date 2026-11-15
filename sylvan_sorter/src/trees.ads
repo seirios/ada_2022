@@ -40,6 +40,7 @@ private
 
    type Node is
       record
+         --  Item 11
          Left, Right : Tree;
          Value : Integer;
       end record;

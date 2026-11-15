@@ -28,6 +28,7 @@ private
 
    type Cell is
       record
+         --  Item 17
          Next : access Cell;
          Value : Integer;
       end record;

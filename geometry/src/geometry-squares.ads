@@ -5,6 +5,7 @@ package Geometry.Squares is
       --  Item 24
       new Object with
       record
+         --  Item 25
          Side : Float;
       end record;
 

@@ -7,6 +7,7 @@ package Geometry.Lists is
 
    type Cell is
       record
+         --  Item 23
          Next : access Cell;
          Element : Pointer;
       end record;

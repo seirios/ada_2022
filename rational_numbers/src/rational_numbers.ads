@@ -43,6 +43,7 @@ private
 
    type Rational is
       record
+         --  Item 6
          Num : Integer := 0;
          Den : Positive := 1;
       end record;
