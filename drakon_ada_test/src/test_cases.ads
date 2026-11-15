@@ -83,6 +83,8 @@ package Test_Cases is
       C : Character
    );
 
+   procedure Simple_Begin;
+
    procedure Simple_Exception (
       X : Integer
    );

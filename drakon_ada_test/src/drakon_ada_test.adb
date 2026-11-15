@@ -46,4 +46,7 @@ begin
 
    Put_Line ("Simple_Exception");
    Test_Cases.Simple_Exception (3);
+
+   Put_Line ("Simple_Begin");
+   Test_Cases.Simple_Begin;
 end Drakon_Ada_Test;

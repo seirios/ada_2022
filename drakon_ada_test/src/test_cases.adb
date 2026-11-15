@@ -250,6 +250,14 @@ package body Test_Cases is
       end case;
    end Select_Combined;
 
+   procedure Simple_Begin
+   is begin
+      begin
+         --  Item 380
+         Put_Line ("In block");
+      end;
+   end Simple_Begin;
+
    procedure Simple_Exception (
       X : Integer
    )
