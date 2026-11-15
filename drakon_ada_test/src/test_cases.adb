@@ -6,6 +6,19 @@ package body Test_Cases is
       --  Item 298
       range 0 .. 1;
 
+   procedure Multi_Declare
+   is begin
+      declare
+         --  Item 420
+         A : constant Integer := 0;
+         --  item 421
+         B : Integer := 1;
+      begin
+         --  Item 424
+         Put_Line (A'Image);
+      end;
+   end Multi_Declare;
+
    procedure Multi_Is
    is
       --  Item 225
@@ -36,6 +49,7 @@ package body Test_Cases is
    procedure Declare_Block
    is begin
       declare
+         --  Item 70
          J : Integer := 0;
       begin
          --  Item 71
@@ -50,11 +64,13 @@ package body Test_Cases is
       --  Item 274
       Outer :
       declare
+         --  Item 79
          J : constant Integer := 0;
       begin
          --  Item 85
          Put_Line (J'Image);
          declare
+            --  Item 82
             K : Integer := 0;
             J : constant Integer := 1;
             L : constant Integer := Outer.J;
@@ -70,6 +86,7 @@ package body Test_Cases is
    procedure Declare_Block_Nested
    is begin
       declare
+         --  Item 56
          J : Integer := 0;
       begin
          --  Item 57
@@ -77,6 +94,7 @@ package body Test_Cases is
          --  Item 63
          Put_Line (J'Image);
          declare
+            --  Item 59
             K : Integer := 0;
          begin
             --  Item 60
@@ -189,6 +207,7 @@ package body Test_Cases is
    )
    is begin
       declare
+         --  Item 402
          A : Integer range 0 .. 2;
       begin
          --  Item 404
@@ -274,6 +293,7 @@ package body Test_Cases is
    )
    is begin
       declare
+         --  Item 386
          A : Integer range 0 .. 2;
       begin
          --  Item 395
@@ -301,6 +321,7 @@ package body Test_Cases is
    )
    is begin
       declare
+         --  Item 361
          A : Integer range 0 .. 2;
       begin
          --  Item 372
