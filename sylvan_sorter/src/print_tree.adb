@@ -14,7 +14,6 @@ with Ada.Text_IO; use Ada;
       A : array (1 .. 4 * Depth (T) - 3) of Page.Line :=
          (others => (others => ' '));
       --  Item 52
-
       procedure Put (
          N, Row, Col, Width : Integer
       )
@@ -40,7 +39,6 @@ with Ada.Text_IO; use Ada;
          end if;
       end Put;
       --  Item 53
-
       procedure Do_It (
          T : Tree;
          Row, Col, W : Integer

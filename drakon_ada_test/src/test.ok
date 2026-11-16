@@ -52,6 +52,8 @@ Declare_Block_Nested
 Declare_Block_Named_Nested
  0
  1
+Declare_Nested_Function
+ 2
 Simple_Nested_Function
  2
 Simple_Exception

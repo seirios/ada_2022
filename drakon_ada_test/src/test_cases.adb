@@ -370,6 +370,27 @@ package body Test_Cases is
       return False;
    end Simple_Return;
 
+   procedure Declare_Nested_Function (
+      X : Integer
+   )
+   is begin
+      declare
+         --  Item 436
+         Y : Integer := X + 1;
+         --  Item 441
+         function Nested_Function (
+            X : Integer
+         ) return Integer
+         is begin
+            --  Item 435
+            return X + 1;
+         end Nested_Function;
+      begin
+         --  Item 440
+         Put_Line (Nested_Function (Y)'Image);
+      end;
+   end Declare_Nested_Function;
+
    procedure Simple_Nested_Function (
       X : Integer
    )
@@ -377,12 +398,11 @@ package body Test_Cases is
       --  Item 342
       Y : Integer := X + 1;
       --  Item 338
-
       function Nested_Function (
          X : Integer
       ) return Integer
       is begin
-         --  Item 332
+         --  Item 435
          return X + 1;
       end Nested_Function;
    begin
