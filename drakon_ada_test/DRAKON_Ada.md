@@ -86,6 +86,10 @@ The following considerations apply:
 + Then come general declarations (e.g., variables).
 + Then come subprograms.
 
+## Limitations
+
++ Nested functions cannot have nested insertions. Solving this would require setting up a topological sort to figure out the dependency order in which to generate code from diagrams.
+
 ## FAQ
 
 Currently empty.

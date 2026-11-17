@@ -41,6 +41,7 @@ package Test_Cases is
       for Simple_Record'Size use 64;
 
    type Simple_Record_Null is
+      --  Item 190
       null record;
 
    type Simple_Type is

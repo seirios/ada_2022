@@ -376,7 +376,7 @@ package body Test_Cases is
    is begin
       declare
          --  Item 436
-         Y : Integer := X + 1;
+         Y : constant Integer := X + 1;
          --  Item 441
          function Nested_Function (
             X : Integer
@@ -385,9 +385,11 @@ package body Test_Cases is
             --  Item 435
             return X + 1;
          end Nested_Function;
+         --  Item 442
+         Z : constant Integer := Y;
       begin
          --  Item 440
-         Put_Line (Nested_Function (Y)'Image);
+         Put_Line (Nested_Function (Z)'Image);
       end;
    end Declare_Nested_Function;
 
@@ -396,7 +398,7 @@ package body Test_Cases is
    )
    is
       --  Item 342
-      Y : Integer := X + 1;
+      Y : constant Integer := X + 1;
       --  Item 338
       function Nested_Function (
          X : Integer

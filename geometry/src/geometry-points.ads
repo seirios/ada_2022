@@ -4,6 +4,7 @@ package Geometry.Points is
    type Point is
       --  Item 24
       new Object with
+      --  Item 25
       null record;
 
    overriding
