@@ -5,6 +5,8 @@ package Test_Cases is
       --  Item 291
       new Positive;
 
+   type Explicit_Limited_Private_Type is limited private;
+
    type Limited_Private_Type is limited private;
 
    type Private_Type is private;
@@ -26,10 +28,18 @@ package Test_Cases is
       --  Item 354
       for Multi_Record'Size use 64;
 
+   type Simple_Abstract_Tagged is abstract tagged
+      record
+         --  Item 454
+         X : Integer;
+      end record;
+
    type Simple_Array is
       --  Item 289
       array (1 .. 10) of Integer
       with Default_Component_Value => 0;
+
+   type Simple_Interface is interface;
 
    type Simple_Record is
       record
@@ -115,6 +125,12 @@ package Test_Cases is
    );
 
 private
+
+   type Explicit_Limited_Private_Type is limited
+      record
+         --  Item 448
+         X, Y : Integer;
+      end record;
 
    type Limited_Private_Type is
       record
