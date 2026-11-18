@@ -2,6 +2,8 @@
 with Rational_Numbers;
 use Rational_Numbers;
 package Rat_Stack is
+
+   --  Item 32
    Error : exception;
 
    procedure Clear;
