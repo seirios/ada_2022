@@ -7,9 +7,11 @@ is
    --  Item 6
    C : Character;
    Control_Error, Done : exception;
-   --  item 7
-   procedure Process (C : Character)
-      is separate;
+   --  Item 39
+   procedure Process (
+      C : Character
+   )
+   is separate;
 begin
    --  Item 8
    Put ("Welcome to the Rational Reckoner");

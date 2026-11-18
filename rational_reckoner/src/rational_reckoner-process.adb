@@ -9,9 +9,11 @@ procedure Process (
 is
    --  Item 6
    R : Rational;
-   --  item 7
-   procedure Get_Rational (R : out Rational)
-      is separate;
+   --  Item 47
+   procedure Get_Rational (
+      R : out Rational
+   )
+   is separate;
 begin
    --  Item 8
    case C is
