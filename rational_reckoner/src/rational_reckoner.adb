@@ -2,49 +2,49 @@
 with Rat_Stack;
 with Ada.Text_IO; use Ada.Text_IO;
 
-   procedure Rational_Reckoner
-   is
-      --  Item 6
-      C : Character;
-      Control_Error, Done : exception;
-      --  item 7
-      procedure Process (C : Character)
-         is separate;
-   begin
-      --  Item 8
-      Put ("Welcome to the Rational Reckoner");
-      New_Line (2);
-      --  Item 9
-      Put_Line ("Operations are + - * / ? ! plus eXit");
-      Put_Line ("Input rational by #[sign]digits/digits");
-      --  Item 10
-      Rat_Stack.Clear;
-      loop
-         --  Item 12
-         begin
-            --  Item 19
-            Get (C);
-            Process (C);
-         --  Item 25
-         exception
-            when Rat_Stack.Error =>
-               --  Item 22
-               New_Line;
-               Put_Line ("Stack over/underflow, " &
-                  "stack reset");
-               Rat_Stack.Clear;
-            when Control_Error =>
-               --  Item 23
-               New_Line;
-               Put_Line ("Unexpected character, " &
-                  "not # + - * / ? ! or X");
-            when Done =>
-               --  Item 32
-               exit;
-         end;
-      end loop;
-      --  Item 11
-      New_Line;
-      Put_Line ("Finished");
-      Skip_Line (2);
-   end Rational_Reckoner;
+procedure Rational_Reckoner
+is
+   --  Item 6
+   C : Character;
+   Control_Error, Done : exception;
+   --  item 7
+   procedure Process (C : Character)
+      is separate;
+begin
+   --  Item 8
+   Put ("Welcome to the Rational Reckoner");
+   New_Line (2);
+   --  Item 9
+   Put_Line ("Operations are + - * / ? ! plus eXit");
+   Put_Line ("Input rational by #[sign]digits/digits");
+   --  Item 10
+   Rat_Stack.Clear;
+   loop
+      --  Item 12
+      begin
+         --  Item 19
+         Get (C);
+         Process (C);
+      --  Item 25
+      exception
+         when Rat_Stack.Error =>
+            --  Item 22
+            New_Line;
+            Put_Line ("Stack over/underflow, " &
+               "stack reset");
+            Rat_Stack.Clear;
+         when Control_Error =>
+            --  Item 23
+            New_Line;
+            Put_Line ("Unexpected character, " &
+               "not # + - * / ? ! or X");
+         when Done =>
+            --  Item 32
+            exit;
+      end;
+   end loop;
+   --  Item 11
+   New_Line;
+   Put_Line ("Finished");
+   Skip_Line (2);
+end Rational_Reckoner;

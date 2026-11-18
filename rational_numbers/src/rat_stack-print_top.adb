@@ -3,19 +3,19 @@ with Rational_Numbers.IO;
 with Ada.Text_IO;
 private with Rat_Stack.Data;
 
-   procedure Rat_Stack.Print_Top
-   is
-      --  Item 6
-      use Data;
-   begin
-      --  Item 7
-      if Top = 0 then
-         --  Item 12
-         Ada.Text_IO.Put ("Nothing on stack");
-      else
-         --  Item 11
-         Rational_Numbers.IO.Put (Stack (Top));
-      end if;
-      --  Item 10
-      Ada.Text_IO.New_Line;
-   end Rat_Stack.Print_Top;
+procedure Rat_Stack.Print_Top
+is
+   --  Item 6
+   use Data;
+begin
+   --  Item 7
+   if Top = 0 then
+      --  Item 12
+      Ada.Text_IO.Put ("Nothing on stack");
+   else
+      --  Item 11
+      Rational_Numbers.IO.Put (Stack (Top));
+   end if;
+   --  Item 10
+   Ada.Text_IO.New_Line;
+end Rat_Stack.Print_Top;

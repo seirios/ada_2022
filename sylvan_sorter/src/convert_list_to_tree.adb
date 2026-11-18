@@ -2,23 +2,23 @@
 with Lists, Trees;
 use Lists, Trees;
 
-   procedure Convert_List_To_Tree (
-      L : List;
-      T : out Tree
-   )
-   is
-      --  Item 6
-      Temp : List := L;
-      Value : Integer;
-   begin
-      --  Item 7
-      Clear (T);
-      loop
-         --  Item 8
-         exit when Is_Empty (Temp);
-         --  Item 11
-         Take_From_List (Temp, Value);
-         --  Item 12
-         Insert (T, Value);
-      end loop;
-   end Convert_List_To_Tree;
+procedure Convert_List_To_Tree (
+   L : List;
+   T : out Tree
+)
+is
+   --  Item 6
+   Temp : List := L;
+   Value : Integer;
+begin
+   --  Item 7
+   Clear (T);
+   loop
+      --  Item 8
+      exit when Is_Empty (Temp);
+      --  Item 11
+      Take_From_List (Temp, Value);
+      --  Item 12
+      Insert (T, Value);
+   end loop;
+end Convert_List_To_Tree;
