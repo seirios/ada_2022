@@ -44,32 +44,28 @@ Each diagram has a description with the same optional sections as above.
 
 The parameter box containts:
 
-+ Keywords, either Ada keywords or DRAKON Ada-specific keywords (first line)
-+ Function parameter list (without semicolons)
-+ The return type of a function after the keyword `returns` (last line)
++ First line: keywords, either from Ada or DRAKON Ada-specific
++ Middle lines: function parameters, one per line (without semicolons)
++ Last line: return type of a function after the keyword `return`
 
 The DRAKON Ada-specific keywords appearing in the parameter box are:
 
-+ `#comment`, which prevents a diagram from being present in the generated output
-  + But it is still checked for diagram correctness
-+ `returns`, which specifies the return type of a function
-  + Must be in the last line of the parameter box
-+ `order`, which allows manual control over the order in which declarations appear in the generated output
-  + Default order of generation is in alphabetical order
++ `name:<name>`, which allows setting the name of the generated subprogram regardless of diagram name
+  + Since diagram names must be unique, this is required for overloading
++ `order:<val>`, which allows manual control over the order in which declarations appear in the generated output
+  + Default sorting is alphabetical
   + All declarations have `order:0` implicitly
-  + To have something appear before, use negative values of `order`, e.g., `order:-1`
-+ `nested`, which allows using diagrams to define subprograms that will be nested inside other subprograms
-  + This appears in the parameter box of a subprogram to be nested, preventing its code from being present in the normal output
-  + Also appears in the insertion icon, to signal that the code should be placed there
+  + To have something appear before/after, use negative/positive values for `order`
++ `local`, `nested` and `visible` which set declaration location (see below)
 
-### Declaration visibility
+### Declaration location
 
-Declaration visibility is controlled by three mutually-exclusive keywords:
+Declaration location is controlled by three mutually-exclusive keywords:
 
 + `visible`: places a declaration in the visible part of a package
 + `private`: places a declaration in the private part of a package
 + `local`: places a declaration in the package body
-+ `nested`: only appears as a nested declaration using an insertion icon
++ `nested`: can only appear as a nested declaration using an insertion icon
 
 The following considerations apply:
 
@@ -85,7 +81,7 @@ At each `order` level, declarations are generated in order:
 
 ## Limitations
 
-+ Nested functions cannot have nested insertions.
++ Nested functions cannot have insertion icons
   + Solving this would require setting up a topological sort to figure out the dependency order in which to generate code from diagrams.
 
 ## FAQ
