@@ -45,6 +45,17 @@ package Test_Cases is
       array (1 .. 10) of Integer
       with Default_Component_Value => 0;
 
+   type Simple_Enum is
+      (Red, Amber, Green, White)
+      with Default_Value => Red;
+
+   type Simple_Enum_Repr is
+      (Red, Amber, Green, White)
+      with Default_Value => Red;
+   --  Item 482
+   for Simple_Enum_Repr use
+      (Red => 4, Amber => 6, Green => 9, White => 15);
+
    type Simple_Interface is interface;
 
    type Simple_Record is
@@ -78,10 +89,6 @@ package Test_Cases is
    type Simple_Type is
       --  Item 290
       new Integer;
-
-   type Simple_Type_Enum is
-      (Red, Amber, Green, White)
-      with Default_Value => Red;
 
    subtype Simple_Subtype is
       --  Item 117
