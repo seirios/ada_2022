@@ -152,6 +152,10 @@ package Test_Cases is
       X : Integer
    );
 
+   procedure Simple_Nested_Type (
+      X : Integer
+   );
+
 private
 
    type Explicit_Limited_Private_Type is limited

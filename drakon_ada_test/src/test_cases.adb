@@ -411,4 +411,19 @@ package body Test_Cases is
       --  Item 339
       Put_Line (Nested_Function (Y)'Image);
    end Simple_Nested_Function;
+
+   procedure Simple_Nested_Type (
+      X : Integer
+   )
+   is
+      --  Item 496
+      type Nested_Type is
+         --  Item 490
+         new Integer;
+      --  Item 498
+      Y : constant Nested_Type := Nested_Type (X + 1);
+   begin
+      --  Item 497
+      Put_Line (Y'Image);
+   end Simple_Nested_Type;
 end Test_Cases;
