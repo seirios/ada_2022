@@ -5,11 +5,17 @@ package Test_Cases is
       --  Item 291
       new Positive;
 
-   type Explicit_Limited_Private_Type is limited private;
+   type Explicit_Limited_Private_Type is
+      --  Item 461
+      limited private;
 
-   type Limited_Private_Type is limited private;
+   type Limited_Private_Type is
+      --  Item 460
+      limited private;
 
-   type Private_Type is private;
+   type Private_Type is
+      --  Item 462
+      private;
 
    type Limited_Type is limited
       record

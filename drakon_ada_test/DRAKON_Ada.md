@@ -64,31 +64,29 @@ The DRAKON Ada-specific keywords appearing in the parameter box are:
 
 ### Declaration visibility
 
-Declaration visibility is controlled by three keywords present in the parameter box:
+Declaration visibility is controlled by three mutually-exclusive keywords:
 
-+ `visible` which places a declaration in the visible part of a package
-+ `private` which places a declaration in the private part of a package
-+ `local` which places a declaration in the package body only
-
-The following conflicts exist:
-
-+ `visible` and `local` is forbidden
-+ `visible` and `private` is forbidden
++ `visible`: places a declaration in the visible part of a package
++ `private`: places a declaration in the private part of a package
++ `local`: places a declaration in the package body
++ `nested`: only appears as a nested declaration using an insertion icon
 
 The following considerations apply:
 
-+ Subprograms implicitly default to `local`, while types implicitly default to `visible`.
-+ A `private` and `local` type has its declaration only in the private part (no `is private` in the visible part).
++ Subprograms and declarations implicitly default to `local`, while types implicitly default to `visible`.
 
 ### Declaration order
 
-+ First come types, then sybtypes.
-+ Then come general declarations (e.g., variables).
+At each `order` level, declarations are generated in order:
+
++ First come partial views of private types, then types, then sybtypes.
++ Then come general declarations.
 + Then come subprograms.
 
 ## Limitations
 
-+ Nested functions cannot have nested insertions. Solving this would require setting up a topological sort to figure out the dependency order in which to generate code from diagrams.
++ Nested functions cannot have nested insertions.
+  + Solving this would require setting up a topological sort to figure out the dependency order in which to generate code from diagrams.
 
 ## FAQ
 
