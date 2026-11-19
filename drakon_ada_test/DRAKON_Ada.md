@@ -2,7 +2,7 @@
 
 DRAKON Ada is a visual programming language that combines the user-friendliness and understandability of DRAKON diagrams with the power and correcteness of Ada.
 
-## Manual
+## User manual
 
 ### Files
 
@@ -28,11 +28,8 @@ Diagrams consist of the following:
 + A single start icon and a single end icon
 + A parameter box to the right of the start icon
 + Action icons
-  + Can be active or inactive (greyed out)
-+ Shelf icons (special actions)
-  + Can be active or inactive (greyed out)
-+ Insertion icons (nested subprograms)
-  + Can be active or inactive (greyed out)
++ Shelf icons (special meaning)
++ Insertion icons (nested declarations)
 + Loop icons
 + Select icons
 + If icons
@@ -78,6 +75,61 @@ At each `order` level, declarations are generated in order:
 + First come partial views of private types, then types, then sybtypes.
 + Then come general declarations.
 + Then come subprograms.
+
+### Shelves
+
+In DRAKON Ada, shelf icons are used to represent syntax for which there are no icons, such as block begin/end, or special actions.
+
+Available shelves are (single word in top box):
+
+#### begin
+
+Starts a block, empty bottom box.
+
+#### end
+
+Ends a block, optional block name in bottom box.
+
+#### return
+
+Starts an extended return statement, value declaration in bottom box.
+
+#### for
+
+Emits a representation clause, everything after 'for' in bottom box.
+Used to have proper indentation of representation clauses included in the diagram defining a type (locality).
+
+The following shelves are merged when present in succession:
+
+#### when
+
+Used to define a loop filter (Ada 2022), condition in bottom box. When merged takes 'and then' of all conditions.
+
+#### enum
+
+Not an Ada keyword. Used to easily define enumerations and their representation clauses, values in bottom box (one per line, no commas).
+
+#### record
+
+Used to define records, fields in bottom box (with semicolons, to support long initial values with line breaks).
+
+#### exception
+
+Used to define exception handlers, alternative in bottom box. When merged, all alternatives appear in definition order in a single `exception` block.
+
+#### declare
+
+Used to provide declarations in a `declare` block before `begin`, declarations in bottom box. May be intercalated with insertions.
+
+#### with
+
+Used to provide aspect specification, single clause (preferrably) in bottom box. When merged, all clauses appear separated by commas after `with`.
+
+#### is
+
+Used to provide declarations in the declarative region of a subprogram (between `is` and `begin`), declarations in bottom box.
+Must appear at the top of a subprogram diagram. May be intercalated with insertions.
+Also used to provide the (visible) partial view of a private type. If not present, a private type will have no partial view.
 
 ## Limitations
 
