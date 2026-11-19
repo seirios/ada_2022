@@ -31,8 +31,8 @@ package Test_Cases is
          --  item 355
          B : Character;
       end record;
-      --  Item 354
-      for Multi_Record'Size use 64;
+   --  Item 473
+   for Multi_Record'Size use 64;
 
    type Simple_Abstract_Tagged is abstract tagged
       record
@@ -53,12 +53,27 @@ package Test_Cases is
          A : Integer;
          B : Character;
       end record;
-      --  Item 343
-      for Simple_Record'Size use 64;
+   --  Item 463
+   for Simple_Record'Size use 64;
 
    type Simple_Record_Null is
       --  Item 190
       null record;
+
+   type Simple_Record_Repr is
+      record
+         --  Item 469
+         A : Integer;
+         B : Integer;
+      end record
+      with Object_Size => 72;
+   --  Item 470
+   for Simple_Record_Repr use
+      record
+         --  Item 472
+         A at 0 range 0 .. 31;
+         B at 5 range 0 .. 31;
+      end record;
 
    type Simple_Type is
       --  Item 290
