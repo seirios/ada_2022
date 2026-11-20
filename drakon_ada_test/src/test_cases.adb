@@ -46,6 +46,12 @@ package body Test_Cases is
       --  Item 265
       (if X > 0 then 1 elsif X < 0 then -1 else 0);
 
+   procedure Nested_Body
+   is begin
+      --  Item 520
+      Put_Line ("Hello, world!");
+   end Nested_Body;
+
    procedure Declare_Block
    is begin
       declare
