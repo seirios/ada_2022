@@ -393,6 +393,21 @@ package body Test_Cases is
       end;
    end Declare_Nested_Function;
 
+   procedure Declare_Nested_Type (
+      X : Integer
+   )
+   is begin
+      declare
+         --  Item 508
+         type Nested_Type is
+            --  Item 490
+            new Integer;
+      begin
+         --  Item 507
+         Put_Line (Nested_Type (X)'Image);
+      end;
+   end Declare_Nested_Type;
+
    procedure Simple_Nested_Function (
       X : Integer
    )

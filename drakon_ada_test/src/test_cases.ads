@@ -157,6 +157,10 @@ package Test_Cases is
       X : Integer
    );
 
+   procedure Declare_Nested_Type (
+      X : Integer
+   );
+
    procedure Simple_Nested_Function (
       X : Integer
    );
