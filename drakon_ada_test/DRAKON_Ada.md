@@ -53,20 +53,18 @@ The DRAKON Ada-specific keywords appearing in the parameter box are:
   + Default sorting is alphabetical
   + All declarations have `order:0` implicitly
   + To have something appear before/after, use negative/positive values for `order`
-+ `local`, `nested` and `visible` which set declaration location (see below)
++ `nested`, which allows nested inclusion of diagrams (see below)
 
 ### Declaration location
 
 Declaration location is controlled by three mutually-exclusive keywords:
 
-+ `visible`: places a declaration in the visible part of a package
-+ `private`: places a declaration in the private part of a package
-+ `local`: places a declaration in the package body
++ `body`: places a declaration in the package body
++ `private`: places a declaration in the private part of the package
 + `nested`: can only appear as a nested declaration using an insertion icon
 
-The following considerations apply:
-
-+ Subprograms and declarations implicitly default to `local`, while types implicitly default to `visible`.
+By default declarations go into the visible part of the package.
+For standalone subprograms use `body` to avoid creating a .ads file.
 
 ### Declaration order
 
