@@ -46,15 +46,24 @@ package Test_Cases is
       with Default_Component_Value => 0;
 
    type Simple_Enum is
-      (Red, Amber, Green, White)
+      (Red,
+      Amber,
+      Green,
+      White)
       with Default_Value => Red;
 
    type Simple_Enum_Repr is
-      (Red, Amber, Green, White)
+      (Red,
+      Amber,
+      Green,
+      White)
       with Default_Value => Red;
    --  Item 482
    for Simple_Enum_Repr use
-      (Red => 4, Amber => 6, Green => 9, White => 15);
+      (Red => 4,
+      Amber => 6,
+      Green => 9,
+      White => 15);
 
    type Simple_Interface is interface;
 
