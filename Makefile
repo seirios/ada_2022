@@ -7,7 +7,7 @@ SUBDIRS := drakon_ada_test \
 
 .PHONY: regen
 regen:
-	$(foreach _,$(SUBDIRS),(cd $_/src && $(MAKE));)
+	$(foreach _,$(SUBDIRS) excerpts,(cd $_/src && $(MAKE));)
 
 .PHONY: build
 build:
