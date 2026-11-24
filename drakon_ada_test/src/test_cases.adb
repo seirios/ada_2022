@@ -30,6 +30,32 @@ package body Test_Cases is
       null;
    end Multi_Is;
 
+   procedure Nested_Body
+   is begin
+      --  Item 520
+      Put_Line ("Hello, world!");
+   end Nested_Body;
+
+   procedure Nested_Nested_Procedure
+   is
+      --  Item 532
+      procedure Nested_Procedure
+      is
+         --  Item 526
+         type Nested_Type is
+            --  Item 490
+            new Integer;
+         --  Item 533
+         X : Nested_Type := 0;
+      begin
+         --  Item 534
+         X := 1;
+      end Nested_Procedure;
+   begin
+      --  Item 535
+      Nested_Procedure;
+   end Nested_Nested_Procedure;
+
    procedure Null_Procedure (
       X : Integer;
       Y : Integer
@@ -45,12 +71,6 @@ package body Test_Cases is
    is
       --  Item 265
       (if X > 0 then 1 elsif X < 0 then -1 else 0);
-
-   procedure Nested_Body
-   is begin
-      --  Item 520
-      Put_Line ("Hello, world!");
-   end Nested_Body;
 
    procedure Declare_Block
    is begin
@@ -110,6 +130,44 @@ package body Test_Cases is
          end;
       end;
    end Declare_Block_Nested;
+
+   procedure Declare_Nested_Function (
+      X : Integer
+   )
+   is begin
+      declare
+         --  Item 436
+         Y : constant Integer := X + 1;
+         --  Item 441
+         function Nested_Function (
+            X : Integer
+         ) return Integer
+         is begin
+            --  Item 435
+            return X + 1;
+         end Nested_Function;
+         --  Item 442
+         Z : constant Integer := Y;
+      begin
+         --  Item 440
+         Put_Line (Nested_Function (Z)'Image);
+      end;
+   end Declare_Nested_Function;
+
+   procedure Declare_Nested_Type (
+      X : Integer
+   )
+   is begin
+      declare
+         --  Item 508
+         type Nested_Type is
+            --  Item 490
+            new Integer;
+      begin
+         --  Item 507
+         Put_Line (Nested_Type (X)'Image);
+      end;
+   end Declare_Nested_Type;
 
    function Extended_Return return Simple_Array
    is begin
@@ -370,50 +428,6 @@ package body Test_Cases is
       end loop;
    end Simple_Loop_Negate;
 
-   function Simple_Return return Boolean
-   is begin
-      --  Item 341
-      return False;
-   end Simple_Return;
-
-   procedure Declare_Nested_Function (
-      X : Integer
-   )
-   is begin
-      declare
-         --  Item 436
-         Y : constant Integer := X + 1;
-         --  Item 441
-         function Nested_Function (
-            X : Integer
-         ) return Integer
-         is begin
-            --  Item 435
-            return X + 1;
-         end Nested_Function;
-         --  Item 442
-         Z : constant Integer := Y;
-      begin
-         --  Item 440
-         Put_Line (Nested_Function (Z)'Image);
-      end;
-   end Declare_Nested_Function;
-
-   procedure Declare_Nested_Type (
-      X : Integer
-   )
-   is begin
-      declare
-         --  Item 508
-         type Nested_Type is
-            --  Item 490
-            new Integer;
-      begin
-         --  Item 507
-         Put_Line (Nested_Type (X)'Image);
-      end;
-   end Declare_Nested_Type;
-
    procedure Simple_Nested_Function (
       X : Integer
    )
@@ -447,4 +461,10 @@ package body Test_Cases is
       --  Item 497
       Put_Line (Y'Image);
    end Simple_Nested_Type;
+
+   function Simple_Return return Boolean
+   is begin
+      --  Item 341
+      return False;
+   end Simple_Return;
 end Test_Cases;

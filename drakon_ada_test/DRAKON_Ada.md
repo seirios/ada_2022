@@ -140,8 +140,7 @@ Inside the icon there must be the word `nested` followed by one of:
 
 ## Limitations
 
-+ Diagrams with `nested` cannot have insertion icons
-  + Solving this would require setting up a topological sort to figure out the dependency order in which to generate code from diagrams.
++ ~~Diagrams with `nested` cannot have insertion icons~~
 
 ## FAQ
 

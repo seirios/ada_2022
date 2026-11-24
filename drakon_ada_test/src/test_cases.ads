@@ -109,6 +109,14 @@ package Test_Cases is
 
    procedure Declare_Block_Nested;
 
+   procedure Declare_Nested_Function (
+      X : Integer
+   );
+
+   procedure Declare_Nested_Type (
+      X : Integer
+   );
+
    function Extended_Return return Simple_Array;
 
    procedure For_Loop;
@@ -151,16 +159,6 @@ package Test_Cases is
 
    procedure Simple_Loop_Negate;
 
-   function Simple_Return return Boolean;
-
-   procedure Declare_Nested_Function (
-      X : Integer
-   );
-
-   procedure Declare_Nested_Type (
-      X : Integer
-   );
-
    procedure Simple_Nested_Function (
       X : Integer
    );
@@ -168,6 +166,8 @@ package Test_Cases is
    procedure Simple_Nested_Type (
       X : Integer
    );
+
+   function Simple_Return return Boolean;
 
 private
 
