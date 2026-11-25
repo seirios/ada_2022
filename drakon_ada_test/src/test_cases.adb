@@ -219,9 +219,8 @@ package body Test_Cases is
 
    procedure For_Loop_Named_Nested
    is begin
-      --  Item 273
-      Outer :
       --  Item 168
+      Outer :
       for I in 0 .. 6
       loop
          --  Item 171
