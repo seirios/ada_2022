@@ -12,3 +12,7 @@ regen:
 .PHONY: build
 build:
 	$(foreach _,$(SUBDIRS),(cd $_/src && alr build);)
+
+.PHONY: test
+test:
+	$(foreach _,$(SUBDIRS),(cd $_/src && alr test);)

@@ -87,7 +87,6 @@ package body Test_Cases is
 
    procedure Declare_Block_Named_Nested
    is begin
-      --  Item 274
       Outer :
       declare
          --  Item 79
