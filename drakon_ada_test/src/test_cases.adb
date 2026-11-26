@@ -211,7 +211,7 @@ package body Test_Cases is
          end if;
          --  Item 283
          Put_Line (I'Image);
-         --  Item 284
+         --  Item 563
          <<Continue>>
       end loop;
    end For_Loop_Continue;
