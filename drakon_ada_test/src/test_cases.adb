@@ -6,6 +6,21 @@ package body Test_Cases is
       --  Item 298
       range 0 .. 1;
 
+   function Extended_Return_Nested return Simple_Array
+   is begin
+      --  Item 572
+      return A : Simple_Array do
+         begin
+            --  Item 569
+            for I in A'Range
+            loop
+               --  Item 571
+               A (I) := 1;
+            end loop;
+         end;
+      end return;
+   end Extended_Return_Nested;
+
    procedure Multi_Declare
    is begin
       declare
@@ -170,6 +185,7 @@ package body Test_Cases is
 
    function Extended_Return return Simple_Array
    is begin
+      --  Item 551
       return A : Simple_Array do
          --  Item 345
          for I in A'Range
