@@ -6,6 +6,32 @@ package body Test_Cases is
       --  Item 298
       range 0 .. 1;
 
+   function Complex_Silhouette (
+      Flag1 : Boolean;
+      Flag2 : Boolean
+   ) return Integer
+   is
+      --  Item 607
+      X : Integer;
+   begin
+      --  Item 616
+      if Flag1 then
+         --  Item 608
+         X := 0;
+      else
+         --  Item 624
+         if Flag2 then
+            --  Item 619
+            X := 1;
+         else
+            --  Item 623
+            X := 2;
+         end if;
+      end if;
+      --  Item 609
+      return X;
+   end Complex_Silhouette;
+
    function Extended_Return_Nested return Simple_Array
    is begin
       --  Item 572
@@ -86,6 +112,17 @@ package body Test_Cases is
    is
       --  Item 265
       (if X > 0 then 1 elsif X < 0 then -1 else 0);
+
+   function Simple_Silhouette return Integer
+   is
+      --  Item 590
+      X : Integer;
+   begin
+      --  Item 591
+      X := 0;
+      --  Item 592
+      return X;
+   end Simple_Silhouette;
 
    procedure Declare_Block
    is begin
